@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isi Materi JENI – Lengkap Semua Bab</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0e1117;
+  --surface: #161b22;
+  --surface2: #1c2333;
+  --border: #30363d;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #58a6ff;
+  --green: #3fb950;
+  --orange: #f0883e;
+  --red: #ff7b72;
+  --purple: #d2a8ff;
+  --yellow: #e3b341;
+  --teal: #39d353;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  display: flex;
+}
+
+/* SIDEBAR */
+#sidebar {
+  width: 280px;
+  min-width: 280px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: 1.5rem 1rem;
+  flex-shrink: 0;
+}
+#sidebar::-webkit-scrollbar { width: 4px; }
+#sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+.sidebar-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-group { margin-bottom: 1.2rem; }
+.sidebar-group-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+  padding-left: 0.5rem;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: all 0.15s;
+  margin-bottom: 1px;
+}
+.sidebar-link:hover, .sidebar-link.active {
+  background: rgba(88,166,255,0.1);
+  color: var(--accent);
+}
+.sidebar-link .bab-num {
+  display: inline-block;
+  width: 22px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-right: 4px;
+}
+
+/* MAIN */
+#main {
+  flex: 1;
+  min-width: 0;
+  padding: 2rem 2.5rem;
+  max-width: 900px;
+}
+
+/* HEADER */
+.page-header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+.page-header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+.page-header h1 span { color: var(--accent); }
+.page-header p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* CHAPTER */
+.chapter {
+  margin-bottom: 4rem;
+  scroll-margin-top: 2rem;
+}
+
+.chapter-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.chapter-num {
+  background: var(--accent);
+  color: #0e1117;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  margin-top: 0.3rem;
+}
+
+.chapter-num.intro2 { background: var(--orange); }
+
+.chapter h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  flex: 1;
+}
+
+/* SECTION */
+.section { margin: 1.8rem 0; }
+.section h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--yellow);
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.section h3::before {
+  content: '▸';
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+.section p, .section li {
+  font-size: 0.9rem;
+  color: #c9d1d9;
+  line-height: 1.8;
+}
+
+.section ul, .section ol {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+.section li { margin-bottom: 0.3rem; }
+
+/* TABLE */
+.tbl {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.82rem;
+}
+.tbl th {
+  background: var(--surface2);
+  color: var(--accent);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  border: 1px solid var(--border);
+}
+.tbl td {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--border);
+  color: #c9d1d9;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  vertical-align: top;
+}
+.tbl tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+
+/* CODE */
+.code-block {
+  background: #0d1117;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+.code-label {
+  background: var(--surface2);
+  padding: 0.4rem 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+}
+.code-block pre {
+  padding: 1.2rem 1.2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  overflow-x: auto;
+  color: #e6edf3;
+  white-space: pre;
+}
+.kw { color: #ff7b72; }
+.cls { color: #ffa657; }
+.str { color: #a5d6ff; }
+.cmt { color: #8b949e; font-style: italic; }
+.fn { color: #d2a8ff; }
+.num { color: #79c0ff; }
+.ann { color: #3fb950; }
+
+/* CALLOUT */
+.callout {
+  border-left: 3px solid var(--accent);
+  background: rgba(88,166,255,0.06);
+  border-radius: 0 8px 8px 0;
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  color: #c9d1d9;
+}
+.callout.warn { border-color: var(--orange); background: rgba(240,136,62,0.06); }
+.callout.tip { border-color: var(--green); background: rgba(63,185,80,0.06); }
+.callout strong { color: var(--accent); }
+.callout.warn strong { color: var(--orange); }
+.callout.tip strong { color: var(--green); }
+
+/* DIVIDER */
+.sep { height: 1px; background: var(--border); margin: 3rem 0; }
+
+/* INTRO TAG */
+.intro-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 1px;
+  padding: 0.15rem 0.5rem;
+  border-radius: 20px;
+  border: 1px solid;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+.intro-badge.i1 { color: var(--accent); border-color: var(--accent); }
+.intro-badge.i2 { color: var(--orange); border-color: var(--orange); }
+
+/* Mobile */
+@media (max-width: 768px) {
+  body { flex-direction: column; }
+  #sidebar { width: 100%; height: auto; position: static; }
+  #main { padding: 1.5rem 1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav id="sidebar">
+  <div class="sidebar-title">☕ JENI Materi</div>
+
+  <div class="sidebar-group">
+    <div class="sidebar-group-label">Intro 1 — Java Dasar</div>
+    <a href="#bab1" class="sidebar-link"><span class="bab-num">01</span>Pengantar Pemrograman</a>
+    <a href="#bab2" class="sidebar-link"><span class="bab-num">02</span>Pengenalan Java</a>
+    <a href="#bab3" class="sidebar-link"><span class="bab-num">03</span>Lingkup Pemrograman</a>
+    <a href="#bab4" class="sidebar-link"><span class="bab-num">04</span>Dasar-Dasar Pemrograman</a>
+    <a href="#bab5" class="sidebar-link"><span class="bab-num">05</span>Input dari Keyboard</a>
+    <a href="#bab6" class="sidebar-link"><span class="bab-num">06</span>Struktur Kontrol</a>
+    <a href="#bab7" class="sidebar-link"><span class="bab-num">07</span>Java Array</a>
+    <a href="#bab8" class="sidebar-link"><span class="bab-num">08</span>Argumen Command Line</a>
+    <a href="#bab9" class="sidebar-link"><span class="bab-num">09</span>Java Class Library</a>
+    <a href="#bab10" class="sidebar-link"><span class="bab-num">10</span>Penulisan Class</a>
+    <a href="#bab11" class="sidebar-link"><span class="bab-num">11</span>Pewarisan & Interface</a>
+    <a href="#bab12" class="sidebar-link"><span class="bab-num">12</span>Exception Handling</a>
+  </div>
+
+  <div class="sidebar-group">
+    <div class="sidebar-group-label">Intro 2 — Java Lanjutan</div>
+    <a href="#i2bab1" class="sidebar-link"><span class="bab-num">01</span>Review Konsep Dasar</a>
+    <a href="#i2bab2" class="sidebar-link"><span class="bab-num">02</span>Exception & Assertion</a>
+    <a href="#i2bab3" class="sidebar-link"><span class="bab-num">03</span>Teknik Prog. Lanjut</a>
+    <a href="#i2bab4" class="sidebar-link"><span class="bab-num">04</span>Package java.lang</a>
+    <a href="#i2bab5" class="sidebar-link"><span class="bab-num">05</span>Aplikasi Berbasis Teks</a>
+    <a href="#i2bab6" class="sidebar-link"><span class="bab-num">06</span>Algoritma Sorting</a>
+    <a href="#i2bab7" class="sidebar-link"><span class="bab-num">07</span>AWT & Swing (GUI)</a>
+    <a href="#i2bab8" class="sidebar-link"><span class="bab-num">08</span>GUI Event Handling</a>
+    <a href="#i2bab9" class="sidebar-link"><span class="bab-num">09</span>Threads</a>
+    <a href="#i2bab10" class="sidebar-link"><span class="bab-num">10</span>Jaringan (Networking)</a>
+    <a href="#i2bab11" class="sidebar-link"><span class="bab-num">11</span>Applet</a>
+    <a href="#i2bab12" class="sidebar-link"><span class="bab-num">12</span>Stream I/O Lanjut</a>
+    <a href="#i2bab13" class="sidebar-link"><span class="bab-num">13</span>Generics</a>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main id="main">
+
+<div class="page-header">
+  <h1>Isi Materi <span>JENI</span></h1>
+  <p>Java Education Network Indonesia — Intro 1 & Intro 2 — Materi Lengkap</p>
+</div>
+
+<!-- ====================== INTRO 1 ====================== -->
+
+<!-- BAB 1 -->
+<div class="chapter" id="bab1">
+  <div class="chapter-header">
+    <span class="chapter-num">BAB 01</span>
+    <h2>Pengantar Pemrograman Komputer <span class="intro-badge i1">INTRO 1</span></h2>
+  </div>
+
+  <div class="section">
+    <h3>Komponen Komputer</h3>
+    <p>Komputer terdiri dari dua komponen utama:</p>
+    <ul>
+      <li><strong>Hardware (Perangkat Keras)</strong> — komponen fisik: CPU, RAM, storage, I/O</li>
+      <li><strong>Software (Perangkat Lunak)</strong> — program yang berjalan di atas hardware. Terbagi menjadi <em>Sistem Operasi</em> dan <em>Aplikasi</em>.</li>
+    </ul>
+    <p>CPU (Central Processing Unit) adalah otak komputer yang mengeksekusi instruksi. RAM menyimpan data sementara yang sedang diproses.</p>
+  </div>
+
+  <div class="section">
+    <h3>Bahasa Pemrograman</h3>
+    <p>Ada 3 tingkatan bahasa pemrograman:</p>
+    <ul>
+      <li><strong>Bahasa Mesin</strong> — kode biner (0 dan 1), langsung dimengerti CPU</li>
+      <li><strong>Bahasa Assembly</strong> — menggunakan mnemonik (MOV, ADD, SUB), masih dekat mesin</li>
+      <li><strong>Bahasa Tingkat Tinggi</strong> — mudah dibaca manusia: Java, Python, C++</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Algoritma & Flowchart</h3>
+    <p>Algoritma adalah urutan langkah-langkah logis untuk memecahkan suatu masalah. Sifat algoritma yang baik: <strong>Terbatas</strong>, <strong>Pasti</strong>, <strong>Masukan jelas</strong>, <strong>Keluaran jelas</strong>, <strong>Efektif</strong>.</p>
+    <p>Contoh algoritma menghitung luas persegi panjang:</p>
+    <div class="code-block">
+      <div class="code-label">Pseudocode</div>
+      <pre>MULAI
+  Baca panjang, lebar
+  luas ← panjang × lebar
+  Tampilkan luas
+SELESAI</pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Sistem Bilangan</h3>
+    <table class="tbl">
+      <tr><th>Sistem</th><th>Basis</th><th>Digit</th><th>Contoh</th></tr>
+      <tr><td>Desimal</td><td>10</td><td>0–9</td><td>255</td></tr>
+      <tr><td>Biner</td><td>2</td><td>0, 1</td><td>11111111</td></tr>
+      <tr><td>Oktal</td><td>8</td><td>0–7</td><td>377</td></tr>
+      <tr><td>Heksadesimal</td><td>16</td><td>0–9, A–F</td><td>FF</td></tr>
+    </table>
+    <p>Konversi desimal 255 ke biner: 255 ÷ 2 terus dibagi = <code>11111111</code>. Dalam Java, literal biner ditulis <code>0b11111111</code>, oktal <code>0377</code>, hex <code>0xFF</code>.</p>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- BAB 2 -->
+<div class="chapter" id="bab2">
+  <div class="chapter-header">
+    <span class="chapter-num">BAB 02</span>
+    <h2>Pengenalan Bahasa Java <span class="intro-badge i1">INTRO 1</span></h2>
+  </div>
+
+  <div class="section">
+    <h3>Sejarah Java</h3>
+    <p>Java diciptakan oleh <strong>James Gosling</strong> di Sun Microsystems pada tahun 1991 dengan nama awal "Oak". Dirilis secara publik tahun 1995. Prinsip utama: <em>"Write Once, Run Anywhere" (WORA)</em> — kode Java dikompilasi menjadi bytecode yang dapat dijalankan di semua platform yang memiliki JVM.</p>
+  </div>
+
+  <div class="section">
+    <h3>Fitur-Fitur Java</h3>
+    <ul>
+      <li><strong>Sederhana</strong> — sintaks mirip C++ tetapi menghilangkan fitur kompleks seperti pointer</li>
+      <li><strong>Berorientasi Objek</strong> — semua kode ada di dalam class</li>
+      <li><strong>Platform Independent</strong> — dikompilasi ke bytecode, dijalankan di JVM</li>
+      <li><strong>Aman</strong> — verifikasi bytecode, tidak ada pointer langsung</li>
+      <li><strong>Multithreaded</strong> — mendukung eksekusi program secara bersamaan</li>
+      <li><strong>Garbage Collection</strong> — memori dikelola otomatis, programmer tidak perlu membebaskan memori manual</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Proses Kompilasi & Eksekusi Java</h3>
+    <div class="callout">
+      <strong>Alur Program Java:</strong><br>
+      Kode Sumber (.java) → Compiler (javac) → Bytecode (.class) → JVM → Dieksekusi
+    </div>
+    <p>JVM (Java Virtual Machine) adalah mesin virtual yang mengeksekusi bytecode. Setiap platform (Windows, Linux, Mac) memiliki JVM sendiri, itulah yang membuat Java portabel.</p>
+  </div>
+
+  <div class="section">
+    <h3>Program Java Pertama</h3>
+    <div class="code-block">
+      <div class="code-label">HelloWorld.java</div>
+      <pre><span class="cmt">/**
+ * Program Java pertama
+ * Menampilkan teks ke layar
+ */</span>
+<span class="kw">public class</span> <span class="cls">HelloWorld</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(String[] args) {
+        System.out.<span class="fn">println</span>(<span class="str">"Hello, World!"</span>);
+        System.out.<span class="fn">println</span>(<span class="str">"Selamat belajar Java!"</span>);
+        System.out.<span class="fn">print</span>(<span class="str">"Tanpa newline"</span>); <span class="cmt">// print vs println</span>
+    }
+}</pre>
+    </div>
+    <table class="tbl">
+      <tr><th>Elemen</th><th>Penjelasan</th></tr>
+      <tr><td>public class HelloWorld</td><td>Deklarasi class, nama harus sama dengan nama file</td></tr>
+      <tr><td>public static void main</td><td>Method utama, titik masuk program Java</td></tr>
+      <tr><td>String[] args</td><td>Parameter untuk argumen command line</td></tr>
+      <tr><td>System.out.println()</td><td>Mencetak ke konsol dengan baris baru</td></tr>
+      <tr><td>System.out.print()</td><td>Mencetak tanpa baris baru</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h3>Kompilasi & Menjalankan</h3>
+    <div class="code-block">
+      <div class="code-label">Terminal / CMD</div>
+      <pre><span class="cmt"># Kompilasi</span>
+javac HelloWorld.java
+
+<span class="cmt"># Jalankan</span>
+java HelloWorld</pre>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- BAB 3 -->
+<div class="chapter" id="bab3">
+  <div class="chapter-header">
+    <span class="chapter-num">BAB 03</span>
+    <h2>Mengenali Lingkup Pemrograman Anda <span class="intro-badge i1">INTRO 1</span></h2>
+  </div>
+
+  <div class="section">
+    <h3>Struktur Dasar Program Java</h3>
+    <p>Setiap program Java terdiri dari satu atau lebih <strong>class</strong>. Di dalam class terdapat <strong>method</strong>. Method <code>main</code> adalah titik awal eksekusi.</p>
+    <div class="code-block">
+      <div class="code-label">Struktur</div>
+      <pre><span class="kw">public class</span> <span class="cls">NamaClass</span> {           <span class="cmt">// deklarasi class</span>
+
+    <span class="cmt">// atribut (variabel class)</span>
+    <span class="kw">int</span> angka = <span class="num">10</span>;
+
+    <span class="cmt">// method</span>
+    <span class="kw">public static void</span> <span class="fn">main</span>(String[] args) {
+        <span class="cmt">// isi program</span>
+    }
+}</pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Komentar dalam Java</h3>
+    <div class="code-block">
+      <div class="code-label">Jenis Komentar</div>
+      <pre><span class="cmt">// Komentar satu baris</span>
+
+<span class="cmt">/* Komentar
+   multi-baris */</span>
+
+<span class="cmt">/**
+ * Komentar Javadoc
+ * Digunakan untuk dokumentasi API
+ * @param args argumen command line
+ */</span></pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Konvensi Penamaan Java</h3>
+    <table class="tbl">
+      <tr><th>Elemen</th><th>Konvensi</th><th>Contoh</th></tr>
+      <tr><td>Class</td><td>PascalCase</td><td>MahasiswaBaru</td></tr>
+      <tr><td>Method</td><td>camelCase</td><td>hitungLuas()</td></tr>
+      <tr><td>Variabel</td><td>camelCase</td><td>namaDepan</td></tr>
+      <tr><td>Konstanta</td><td>UPPER_SNAKE_CASE</td><td>MAX_NILAI</td></tr>
+      <tr><td>Package</td><td>huruf kecil semua</td><td>com.jeni.belajar</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h3>IDE dan Tools</h3>
+    <ul>
+      <li><strong>JDK</strong> (Java Development Kit) — wajib, berisi javac dan java</li>
+      <li><strong>NetBeans</strong> — IDE resmi yang direkomendasikan JENI</li>
+      <li><strong>Eclipse</strong> — IDE populer lainnya</li>
+      <li><strong>IntelliJ IDEA</strong> — IDE modern, sangat populer saat ini</li>
+      <li><strong>VS Code</strong> + Extension Pack for Java — ringan dan fleksibel</li>
+    </ul>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- BAB 4 -->
+<div class="chapter" id="bab4">
+  <div class="chapter-header">
+    <span class="chapter-num">BAB 04</span>
+    <h2>Dasar-Dasar Pemrograman <span class="intro-badge i1">INTRO 1</span></h2>
+  </div>
+
+  <div class="section">
+    <h3>Tipe Data Primitif</h3>
+    <table class="tbl">
+      <tr><th>Tipe</th><th>Ukuran</th><th>Nilai Default</th><th>Rentang</th><th>Contoh</th></tr>
+      <tr><td>byte</td><td>8 bit</td><td>0</td><td>-128 s/d 127</td><td>byte b = 100;</td></tr>
+      <tr><td>short</td><td>16 bit</td><td>0</td><td>-32768 s/d 32767</td><td>short s = 200;</td></tr>
+      <tr><td>int</td><td>32 bit</td><td>0</td><td>-2³¹ s/d 2³¹-1</td><td>int i = 1000;</td></tr>
+      <tr><td>long</td><td>64 bit</td><td>0L</td><td>-2⁶³ s/d 2⁶³-1</td><td>long l = 9999L;</td></tr>
+      <tr><td>float</td><td>32 bit</td><td>0.0f</td><td>±3.4×10³⁸</td><td>float f = 3.14f;</td></tr>
+      <tr><td>double</td><td>64 bit</td><td>0.0d</td><td>±1.7×10³⁰⁸</td><td>double d = 3.14;</td></tr>
+      <tr><td>char</td><td>16 bit</td><td>'\u0000'</td><td>0 s/d 65535</td><td>char c = 'A';</td></tr>
+      <tr><td>boolean</td><td>1 bit</td><td>false</td><td>true / false</td><td>boolean ok = true;</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h3>Variabel dan Konstanta</h3>
+    <div class="code-block">
+      <div class="code-label">Deklarasi Variabel & Konstanta</div>
+      <pre><span class="cmt">// Deklarasi variabel</span>
+<span class="kw">int</span> umur;                    <span class="cmt">// deklarasi saja</span>
+<span class="kw">int</span> nilai = <span class="num">90</span>;              <span class="cmt">// deklarasi + inisialisasi</span>
+<span class="kw">double</span> harga = <span class="num">15000.50</span>;
+String nama = <span class="str">"Budi"</span>;       <span class="cmt">// String adalah class, bukan primitif</span>
+
+<span class="cmt">// Konstanta (tidak bisa diubah)</span>
+<span class="kw">final double</span> PI = <span class="num">3.14159265</span>;
+<span class="kw">final int</span> MAX_MAHASISWA = <span class="num">100</span>;
+
+<span class="cmt">// Beberapa variabel sekaligus</span>
+<span class="kw">int</span> x = <span class="num">1</span>, y = <span class="num">2</span>, z = <span class="num">3</span>;</pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Operator Java</h3>
+    <p><strong>Operator Aritmatika:</strong></p>
+    <table class="tbl">
+      <tr><th>Operator</th><th>Nama</th><th>Contoh</th><th>Hasil</th></tr>
+      <tr><td>+</td><td>Penjumlahan</td><td>5 + 3</td><td>8</td></tr>
+      <tr><td>-</td><td>Pengurangan</td><td>10 - 4</td><td>6</td></tr>
+      <tr><td>*</td><td>Perkalian</td><td>3 * 4</td><td>12</td></tr>
+      <tr><td>/</td><td>Pembagian</td><td>10 / 3</td><td>3 (integer)</td></tr>
+      <tr><td>%</td><td>Modulus (sisa bagi)</td><td>10 % 3</td><td>1</td></tr>
+      <tr><td>++</td><td>Increment</td><td>i++</td><td>i ditambah 1</td></tr>
+      <tr><td>--</td><td>Decrement</td><td>i--</td><td>i dikurang 1</td></tr>
+    </table>
+
+    <p><strong>Operator Perbandingan (menghasilkan boolean):</strong></p>
+    <table class="tbl">
+      <tr><th>Operator</th><th>Arti</th></tr>
+      <tr><td>==</td><td>Sama dengan</td></tr>
+      <tr><td>!=</td><td>Tidak sama dengan</td></tr>
+      <tr><td>&gt;</td><td>Lebih besar dari</td></tr>
+      <tr><td>&lt;</td><td>Lebih kecil dari</td></tr>
+      <tr><td>&gt;=</td><td>Lebih besar atau sama</td></tr>
+      <tr><td>&lt;=</td><td>Lebih kecil atau sama</td></tr>
+    </table>
+
+    <p><strong>Operator Logika:</strong></p>
+    <table class="tbl">
+      <tr><th>Operator</th><th>Nama</th><th>Contoh</th></tr>
+      <tr><td>&&</td><td>AND (dan)</td><td>a > 0 && b > 0</td></tr>
+      <tr><td>||</td><td>OR (atau)</td><td>a > 0 || b > 0</td></tr>
+      <tr><td>!</td><td>NOT (tidak)</td><td>!sudahLogin</td></tr>
+    </table>
+
+    <div class="code-block">
+      <div class="code-label">Contoh Operator</div>
+      <pre><span class="kw">public class</span> <span class="cls">ContohOperator</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(String[] args) {
+        <span class="kw">int</span> a = <span class="num">10</span>, b = <span class="num">3</span>;
+
+        System.out.<span class="fn">println</span>(a + b);   <span class="cmt">// 13</span>
+        System.out.<span class="fn">println</span>(a - b);   <span class="cmt">// 7</span>
+        System.out.<span class="fn">println</span>(a * b);   <span class="cmt">// 30</span>
+        System.out.<span class="fn">println</span>(a / b);   <span class="cmt">// 3 (bukan 3.33!)</span>
+        System.out.<span class="fn">println</span>(a % b);   <span class="cmt">// 1</span>
+
+        <span class="cmt">// Untuk hasil desimal, gunakan double</span>
+        <span class="kw">double</span> hasil = (<span class="kw">double</span>) a / b;
+        System.out.<span class="fn">println</span>(hasil);    <span class="cmt">// 3.3333...</span>
+
+        <span class="cmt">// Pre vs Post increment</span>
+        <span class="kw">int</span> x = <span class="num">5</span>;
+        System.out.<span class="fn">println</span>(x++);  <span class="cmt">// tampil 5, lalu x jadi 6</span>
+        System.out.<span class="fn">println</span>(++x);  <span class="cmt">// x jadi 7 dulu, tampil 7</span>
+    }
+}</pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Konversi Tipe Data (Casting)</h3>
+    <div class="code-block">
+      <div class="code-label">Type Casting</div>
+      <pre><span class="cmt">// Implicit (otomatis, tidak kehilangan data): kecil → besar</span>
+<span class="kw">int</span> angka = <span class="num">100</span>;
+<span class="kw">double</span> d = angka;     <span class="cmt">// int otomatis jadi double → 100.0</span>
+
+<span class="cmt">// Explicit (manual, bisa kehilangan data): besar → kecil</span>
+<span class="kw">double</span> pi = <span class="num">3.14159</span>;
+<span class="kw">int</span> bulat = (<span class="kw">int</span>) pi;  <span class="cmt">// cast ke int → 3 (desimal dipotong!)</span></pre>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- BAB 5 -->
+<div class="chapter" id="bab5">
+  <div class="chapter-header">
+    <span class="chapter-num">BAB 05</span>
+    <h2>Mendapatkan Input dari Keyboard <span class="intro-badge i1">INTRO 1</span></h2>
+  </div>
+
+  <div class="section">
+    <h3>Menggunakan Scanner (Cara Modern)</h3>
+    <div class="code-block">
+      <div class="code-label">InputScanner.java</div>
+      <pre><span class="kw">import</span> java.util.Scanner;  <span class="cmt">// harus di-import</span>
+
+<span class="kw">public class</span> <span class="cls">InputScanner</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(String[] args) {
+        Scanner sc = <span class="kw">new</span> <span class="cls">Scanner</span>(System.in);
+
+        System.out.<span class="fn">print</span>(<span class="str">"Masukkan nama: "</span>);
+        String nama = sc.<span class="fn">nextLine</span>();      <span class="cmt">// baca String satu baris</span>
+
+        System.out.<span class="fn">print</span>(<span class="str">"Masukkan umur: "</span>);
+        <span class="kw">int</span> umur = sc.<span class="fn">nextInt</span>();           <span class="cmt">// baca integer</span>
+
+        System.out.<span class="fn">print</span>(<span class="str">"Masukkan nilai: "</span>);
+        <span class="kw">double</span> nilai = sc.<span class="fn">nextDouble</span>();    <span class="cmt">// baca double</span>
+
+        System.out.<span class="fn">println</span>(<span class="str">"Halo, "</span> + nama + <span class="str">"! Umur: "</span> + umur);
+        System.out.<span class="fn">println</span>(<span class="str">"Nilai kamu: "</span> + nilai);
+
+        sc.<span class="fn">close</span>();
+    }
+}</pre>
+    </div>
+    <table class="tbl">
+      <tr><th>Method Scanner</th><th>Membaca</th></tr>
+      <tr><td>nextLine()</td><td>Satu baris teks (String)</td></tr>
+      <tr><td>next()</td><td>Satu kata (sampai spasi)</td></tr>
+      <tr><td>nextInt()</td><td>Bilangan bulat (int)</td></tr>
+      <tr><td>nextDouble()</td><td>Bilangan desimal (double)</td></tr>
+      <tr><td>nextBoolean()</td><td>true/false</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h3>Menggunakan BufferedReader (Cara Lama / JENI Asli)</h3>
+    <div class="code-block">
+      <div class="code-label">InputBuffered.java</div>
+      <pre><span class="kw">import</span> java.io.*;
+
+<span class="kw">public class</span> <span class="cls">InputBuffered</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(String[] args) <span class="kw">throws</span> IOException {
+        BufferedReader br = <span class="kw">new</span> <span class="cls">BufferedReader</span>(
+            <span class="kw">new</span> <span class="cls">InputStreamReader</span>(System.in)
+        );
+
+        System.out.<span class="fn">print</span>(<span class="str">"Masukkan nama: "</span>);
+        String nama = br.<span class="fn">readLine</span>();  <span class="cmt">// selalu String</span>
+
+        System.out.<span class="fn">print</span>(<span class="str">"Masukkan umur: "</span>);
+        <span class="kw">int</span> umur = Integer.<span class="fn">parseInt</span>(br.<span class="fn">readLine</span>()); <span class="cmt">// konversi ke int</span>
+
+        System.out.<span class="fn">println</span>(<span class="str">"Halo "</span> + nama + <span class="str">", umur "</span> + umur);
+    }
+}</pre>
+    </div>
+    <div class="callout warn">
+      <strong>Catatan:</strong> BufferedReader hanya membaca String, sehingga perlu konversi: Integer.parseInt(), Double.parseDouble(), dll.
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Menggunakan JOptionPane (GUI Dialog)</h3>
+    <div class="code-block">
+      <div class="code-label">InputDialog.java</div>
+      <pre><span class="kw">import</span> javax.swing.JOptionPane;
+
+<span class="kw">public class</span> <span class="cls">InputDialog</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(String[] args) {
+        String input = JOptionPane.<span class="fn">showInputDialog</span>(<span class="str">"Masukkan nama:"</span>);
+        JOptionPane.<span class="fn">showMessageDialog</span>(<span class="kw">null</span>, <span class="str">"Halo, "</span> + input + <span class="str">"!"</span>);
+    }
+}</pre>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- BAB 6 -->
+<div class="chapter" id="bab6">
+  <div class="chapter-header">
+    <span class="chapter-num">BAB 06</span>
+    <h2>Struktur Kontrol <span class="intro-badge i1">INTRO 1</span></h2>
+  </div>
+
+  <div class="section">
+    <h3>Pernyataan if – else if – else</h3>
+    <div class="code-block">
+      <div class="code-label">StrukturIf.java</div>
+      <pre><span class="kw">int</span> nilai = <span class="num">75</span>;
+<span class="kw">char</span> grade;
+
+<span class="kw">if</span> (nilai >= <span class="num">90</span>) {
+    grade = <span class="str">'A'</span>;
+} <span class="kw">else if</span> (nilai >= <span class="num">80</span>) {
+    grade = <span class="str">'B'</span>;
+} <span class="kw">else if</span> (nilai >= <span class="num">70</span>) {
+    grade = <span class="str">'C'</span>;
+} <span class="kw">else if</span> (nilai >= <span class="num">60</span>) {
+    grade = <span class="str">'D'</span>;
+} <span class="kw">else</span> {
+    grade = <span class="str">'E'</span>;
+}
+System.out.<span class="fn">println</span>(<span class="str">"Grade: "</span> + grade);</pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Switch – Case</h3>
+    <div class="code-block">
+      <div class="code-label">Switch.java</div>
+      <pre><span class="kw">int</span> hari = <span class="num">3</span>;
+<span class="kw">switch</span> (hari) {
+    <span class="kw">case</span> <span class="num">1</span>: System.out.<span class="fn">println</span>(<span class="str">"Senin"</span>);    <span class="kw">break</span>;
+    <span class="kw">case</span> <span class="num">2</span>: System.out.<span class="fn">println</span>(<span class="str">"Selasa"</span>);   <span class="kw">break</span>;
+    <span class="kw">case</span> <span class="num">3</span>: System.out.<span class="fn">println</span>(<span class="str">"Rabu"</span>);     <span class="kw">break</span>;
+    <span class="kw">case</span> <span class="num">4</span>: System.out.<span class="fn">println</span>(<span class="str">"Kamis"</span>);    <span class="kw">break</span>;
+    <span class="kw">case</span> <span class="num">5</span>: System.out.<span class="fn">println</span>(<span class="str">"Jumat"</span>);    <span class="kw">break</span>;
+    <span class="kw">case</span> <span class="num">6</span>: System.out.<span class="fn">println</span>(<span class="str">"Sabtu"</span>);    <span class="kw">break</span>;
+    <span class="kw">case</span> <span class="num">7</span>: System.out.<span class="fn">println</span>(<span class="str">"Minggu"</span>);   <span class="kw">break</span>;
+    <span class="kw">default</span>: System.out.<span class="fn">println</span>(<span class="str">"Tidak valid"</span>);
+}</pre>
+    </div>
+    <div class="callout warn"><strong>Penting:</strong> Jangan lupa <code>break</code> di setiap case, kalau tidak Java akan terus mengeksekusi case berikutnya (fall-through).</div>
+  </div>
+
+  <div class="section">
+    <h3>Perulangan for</h3>
+    <div class="code-block">
+      <div class="code-label">ForLoop.java</div>
+      <pre><span class="cmt">// for (inisialisasi; kondisi; update)</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">1</span>; i <= <span class="num">5</span>; i++) {
+    System.out.<span class="fn">println</span>(<span class="str">"Baris ke-"</span> + i);
+}
+
+<span class="cmt">// Menghitung total</span>
+<span class="kw">int</span> total = <span class="num">0</span>;
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">1</span>; i <= <span class="num">100</span>; i++) {
+    total += i;  <span class="cmt">// total = total + i</span>
+}
+System.out.<span class="fn">println</span>(<span class="str">"Total 1-100: "</span> + total);  <span class="cmt">// 5050</span></pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Perulangan while & do-while</h3>
+    <div class="code-block">
+      <div class="code-label">WhileDoWhile.java</div>
+      <pre><span class="cmt">// while: cek kondisi DULU, lalu eksekusi</span>
+<span class="kw">int</span> n = <span class="num">1</span>;
+<span class="kw">while</span> (n <= <span class="num">5</span>) {
+    System.out.<span class="fn">println</span>(n);
+    n++;
+}
+
+<span class="cmt">// do-while: eksekusi DULU, lalu cek kondisi (minimal 1x jalan)</span>
+<span class="kw">int</span> m = <span class="num">10</span>;
+<span class="kw">do</span> {
+    System.out.<span class="fn">println</span>(<span class="str">"Nilai: "</span> + m);
+    m++;
+} <span class="kw">while</span> (m < <span class="num">5</span>);
+<span class="cmt">// Meski kondisi false dari awal, do-while tetap jalan 1x!</span></pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>break, continue, dan Nested Loop</h3>
+    <div class="code-block">
+      <div class="code-label">BreakContinue.java</div>
+      <pre><span class="cmt">// break: keluar dari loop</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i < <span class="num">10</span>; i++) {
+    <span class="kw">if</span> (i == <span class="num">5</span>) <span class="kw">break</span>;   <span class="cmt">// stop di angka 5</span>
+    System.out.<span class="fn">println</span>(i);  <span class="cmt">// cetak 0,1,2,3,4</span>
+}
+
+<span class="cmt">// continue: lewati iterasi ini, lanjut ke berikutnya</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i < <span class="num">10</span>; i++) {
+    <span class="kw">if</span> (i % <span class="num">2</span> == <span class="num">0</span>) <span class="kw">continue</span>;  <span class="cmt">// lewati bilangan genap</span>
+    System.out.<span class="fn">println</span>(i);      <span class="cmt">// cetak 1,3,5,7,9</span>
+}
+
+<span class="cmt">// Nested loop: tabel perkalian</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">1</span>; i <= <span class="num">3</span>; i++) {
+    <span class="kw">for</span> (<span class="kw">int</span> j = <span class="num">1</span>; j <= <span class="num">3</span>; j++) {
+        System.out.<span class="fn">print</span>(i * j + <span class="str">"\t"</span>);
+    }
+    System.out.<span class="fn">println</span>();
+}</pre>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- BAB 7 -->
+<div class="chapter" id="bab7">
+  <div class="chapter-header">
+    <span class="chapter-num">BAB 07</span>
+    <h2>Java Array <span class="intro-badge i1">INTRO 1</span></h2>
+  </div>
+
+  <div class="section">
+    <h3>Pengenalan Array</h3>
+    <p>Array adalah variabel yang menyimpan sekumpulan data bertipe sama. Setiap elemen disimpan secara berurutan di memori dan diakses lewat <strong>indeks</strong> yang dimulai dari <strong>0</strong>.</p>
+    <div class="callout">
+      <strong>Analogi:</strong> Bayangkan array seperti loker bernomor. Loker 0, 1, 2, dst — setiap loker isinya sama jenisnya (semua isi int, atau semua String, dsb).
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Deklarasi & Pembuatan Array</h3>
+    <div class="code-block">
+      <div class="code-label">Array1D.java</div>
+      <pre><span class="cmt">// Cara 1: deklarasi dulu, buat array belakangan</span>
+<span class="kw">int</span>[] nilai;
+nilai = <span class="kw">new int</span>[<span class="num">5</span>];  <span class="cmt">// array int berisi 5 elemen, default 0</span>
+
+<span class="cmt">// Cara 2: deklarasi + inisialisasi langsung</span>
+<span class="kw">int</span>[] angka = {<span class="num">10</span>, <span class="num">20</span>, <span class="num">30</span>, <span class="num">40</span>, <span class="num">50</span>};
+
+<span class="cmt">// Mengisi elemen</span>
+nilai[<span class="num">0</span>] = <span class="num">85</span>;
+nilai[<span class="num">1</span>] = <span class="num">92</span>;
+nilai[<span class="num">2</span>] = <span class="num">78</span>;
+
+<span class="cmt">// Mengakses elemen</span>
+System.out.<span class="fn">println</span>(angka[<span class="num">0</span>]);   <span class="cmt">// 10</span>
+System.out.<span class="fn">println</span>(angka[<span class="num">4</span>]);   <span class="cmt">// 50</span>
+
+<span class="cmt">// Panjang array</span>
+System.out.<span class="fn">println</span>(angka.length); <span class="cmt">// 5</span></pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Iterasi Array</h3>
+    <div class="code-block">
+      <div class="code-label">IterasiArray.java</div>
+      <pre><span class="kw">int</span>[] nilai = {<span class="num">85</span>, <span class="num">92</span>, <span class="num">78</span>, <span class="num">95</span>, <span class="num">88</span>};
+
+<span class="cmt">// For biasa</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i < nilai.length; i++) {
+    System.out.<span class="fn">println</span>(<span class="str">"nilai["</span> + i + <span class="str">"] = "</span> + nilai[i]);
+}
+
+<span class="cmt">// For-each (lebih ringkas, tapi tidak bisa ubah elemen)</span>
+<span class="kw">int</span> total = <span class="num">0</span>;
+<span class="kw">for</span> (<span class="kw">int</span> n : nilai) {
+    total += n;
+}
+System.out.<span class="fn">println</span>(<span class="str">"Rata-rata: "</span> + (<span class="kw">double</span>)total / nilai.length);</pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Array Multidimensi</h3>
+    <div class="code-block">
+      <div class="code-label">Array2D.java</div>
+      <pre><span class="cmt">// Array 2 dimensi (matriks)</span>
+<span class="kw">int</span>[][] matriks = {
+    {<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>},
+    {<span class="num">4</span>, <span class="num">5</span>, <span class="num">6</span>},
+    {<span class="num">7</span>, <span class="num">8</span>, <span class="num">9</span>}
+};
+
+<span class="cmt">// Akses elemen: [baris][kolom]</span>
+System.out.<span class="fn">println</span>(matriks[<span class="num">1</span>][<span class="num">2</span>]);  <span class="cmt">// 6</span>
+
+<span class="cmt">// Iterasi matriks</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i < matriks.length; i++) {
+    <span class="kw">for</span> (<span class="kw">int</span> j = <span class="num">0</span>; j < matriks[i].length; j++) {
+        System.out.<span class="fn">print</span>(matriks[i][j] + <span class="str">" "</span>);
+    }
+    System.out.<span class="fn">println</span>();
+}</pre>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- BAB 8 -->
+<div class="chapter" id="bab8">
+  <div class="chapter-header">
+    <span class="chapter-num">BAB 08</span>
+    <h2>Argumen Command Line <span class="intro-badge i1">INTRO 1</span></h2>
+  </div>
+  <div class="section">
+    <h3>Parameter args[] pada main</h3>
+    <p>Parameter <code>String[] args</code> pada method <code>main</code> digunakan untuk menerima argumen yang dimasukkan saat menjalankan program dari command line.</p>
+    <div class="code-block">
+      <div class="code-label">ArgsCLI.java</div>
+      <pre><span class="kw">public class</span> <span class="cls">ArgsCLI</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(String[] args) {
+        System.out.<span class="fn">println</span>(<span class="str">"Jumlah argumen: "</span> + args.length);
+
+        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i < args.length; i++) {
+            System.out.<span class="fn">println</span>(<span class="str">"args["</span> + i + <span class="str">"] = "</span> + args[i]);
+        }
+    }
+}
+
+<span class="cmt">// Dijalankan dengan: java ArgsCLI Budi 25 Jakarta
+// Output:
+// Jumlah argumen: 3
+// args[0] = Budi
+// args[1] = 25
+// args[2] = Jakarta</span></pre>
+    </div>
+    <div class="callout warn"><strong>Catatan:</strong> Semua argumen adalah String. Untuk menggunakannya sebagai angka, perlu konversi: <code>Integer.parseInt(args[0])</code></div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- BAB 9 -->
+<div class="chapter" id="bab9">
+  <div class="chapter-header">
+    <span class="chapter-num">BAB 09</span>
+    <h2>Bekerja dengan Java Class Library <span class="intro-badge i1">INTRO 1</span></h2>
+  </div>
+
+  <div class="section">
+    <h3>Konsep Dasar OOP: Class & Object</h3>
+    <ul>
+      <li><strong>Class</strong> = blueprint / cetakan, mendefinisikan atribut dan perilaku</li>
+      <li><strong>Object</strong> = instansi nyata dari class, dibuat dengan keyword <code>new</code></li>
+      <li><strong>Enkapsulasi</strong> = menyembunyikan data internal, akses lewat method</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Class String — Sangat Sering Digunakan</h3>
+    <div class="code-block">
+      <div class="code-label">ContohString.java</div>
+      <pre>String s1 = <span class="str">"Hello, Java!"</span>;
+
+<span class="cmt">// Method-method String penting</span>
+System.out.<span class="fn">println</span>(s1.<span class="fn">length</span>());          <span class="cmt">// 12</span>
+System.out.<span class="fn">println</span>(s1.<span class="fn">toUpperCase</span>());    <span class="cmt">// HELLO, JAVA!</span>
+System.out.<span class="fn">println</span>(s1.<span class="fn">toLowerCase</span>());    <span class="cmt">// hello, java!</span>
+System.out.<span class="fn">println</span>(s1.<span class="fn">charAt</span>(<span class="num">0</span>));        <span class="cmt">// H</span>
+System.out.<span class="fn">println</span>(s1.<span class="fn">substring</span>(<span class="num">7</span>));     <span class="cmt">// Java!</span>
+System.out.<span class="fn">println</span>(s1.<span class="fn">substring</span>(<span class="num">7</span>, <span class="num">11</span>)); <span class="cmt">// Java</span>
+System.out.<span class="fn">println</span>(s1.<span class="fn">indexOf</span>(<span class="str">"Java"</span>));  <span class="cmt">// 7</span>
+System.out.<span class="fn">println</span>(s1.<span class="fn">replace</span>(<span class="str">"Java"</span>, <span class="str">"World"</span>)); <span class="cmt">// Hello, World!</span>
+System.out.<span class="fn">println</span>(s1.<span class="fn">contains</span>(<span class="str">"Java"</span>)); <span class="cmt">// true</span>
+System.out.<span class="fn">println</span>(s1.<span class="fn">trim</span>());           <span class="cmt">// hilangkan spasi depan/belakang</span>
+System.out.<span class="fn">println</span>(s1.<span class="fn">split</span>(<span class="str">","</span>)[<span class="num">0</span>]);    <span class="cmt">// Hello</span>
+
+<span class="cmt">// Perbandingan String HARUS pakai equals(), bukan ==</span>
+String a = <span class="str">"hello"</span>;
+String b = <span class="str">"hello"</span>;
+System.out.<span class="fn">println</span>(a.<span class="fn">equals</span>(b));          <span class="cmt">// true (benar)</span>
+System.out.<span class="fn">println</span>(a.<span class="fn">equalsIgnoreCase</span>(b)); <span class="cmt">// true, abaikan kapital</span></pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Class Math</h3>
+    <div class="code-block">
+      <div class="code-label">ContohMath.java</div>
+      <pre>System.out.<span class="fn">println</span>(Math.<span class="fn">abs</span>(-<span class="num">15</span>));      <span class="cmt">// 15 (nilai absolut)</span>
+System.out.<span class="fn">println</span>(Math.<span class="fn">max</span>(<span class="num">10</span>, <span class="num">25</span>));  <span class="cmt">// 25</span>
+System.out.<span class="fn">println</span>(Math.<span class="fn">min</span>(<span class="num">10</span>, <span class="num">25</span>));  <span class="cmt">// 10</span>
+System.out.<span class="fn">println</span>(Math.<span class="fn">pow</span>(<span class="num">2</span>, <span class="num">10</span>));  <span class="cmt">// 1024.0 (2^10)</span>
+System.out.<span class="fn">println</span>(Math.<span class="fn">sqrt</span>(<span class="num">144</span>));  <span class="cmt">// 12.0</span>
+System.out.<span class="fn">println</span>(Math.<span class="fn">floor</span>(<span class="num">3.9</span>)); <span class="cmt">// 3.0 (dibulatkan bawah)</span>
+System.out.<span class="fn">println</span>(Math.<span class="fn">ceil</span>(<span class="num">3.1</span>));  <span class="cmt">// 4.0 (dibulatkan atas)</span>
+System.out.<span class="fn">println</span>(Math.<span class="fn">round</span>(<span class="num">3.6</span>)); <span class="cmt">// 4 (dibulatkan normal)</span>
+System.out.<span class="fn">println</span>(Math.<span class="fn">random</span>());   <span class="cmt">// acak 0.0 s/d 1.0</span>
+
+<span class="cmt">// Angka acak 1-100:</span>
+<span class="kw">int</span> acak = (<span class="kw">int</span>)(Math.<span class="fn">random</span>() * <span class="num">100</span>) + <span class="num">1</span>;</pre>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- BAB 10 -->
+<div class="chapter" id="bab10">
+  <div class="chapter-header">
+    <span class="chapter-num">BAB 10</span>
+    <h2>Penulisan Class <span class="intro-badge i1">INTRO 1</span></h2>
+  </div>
+
+  <div class="section">
+    <h3>Membuat Class Sendiri</h3>
+    <div class="code-block">
+      <div class="code-label">Mahasiswa.java</div>
+      <pre><span class="kw">public class</span> <span class="cls">Mahasiswa</span> {
+    <span class="cmt">// Atribut (field) — biasanya private</span>
+    <span class="kw">private</span> String nama;
+    <span class="kw">private</span> String nim;
+    <span class="kw">private</span> <span class="kw">double</span> ipk;
+
+    <span class="cmt">// Constructor — dipanggil saat new Mahasiswa()</span>
+    <span class="kw">public</span> <span class="cls">Mahasiswa</span>(String nama, String nim, <span class="kw">double</span> ipk) {
+        <span class="kw">this</span>.nama = nama;   <span class="cmt">// this = merujuk atribut object ini</span>
+        <span class="kw">this</span>.nim = nim;
+        <span class="kw">this</span>.ipk = ipk;
+    }
+
+    <span class="cmt">// Constructor kosong (default)</span>
+    <span class="kw">public</span> <span class="cls">Mahasiswa</span>() {
+        <span class="kw">this</span>(<span class="str">"Tidak Diketahui"</span>, <span class="str">"000000"</span>, <span class="num">0.0</span>);
+    }
+
+    <span class="cmt">// Getter dan Setter</span>
+    <span class="kw">public</span> String <span class="fn">getNama</span>()  { <span class="kw">return</span> nama; }
+    <span class="kw">public void</span>   <span class="fn">setNama</span>(String nama) { <span class="kw">this</span>.nama = nama; }
+
+    <span class="kw">public</span> String <span class="fn">getNim</span>()  { <span class="kw">return</span> nim; }
+    <span class="kw">public</span> <span class="kw">double</span> <span class="fn">getIpk</span>()  { <span class="kw">return</span> ipk; }
+
+    <span class="cmt">// Method</span>
+    <span class="kw">public</span> String <span class="fn">getPredikat</span>() {
+        <span class="kw">if</span> (ipk >= <span class="num">3.5</span>) <span class="kw">return</span> <span class="str">"Cumlaude"</span>;
+        <span class="kw">if</span> (ipk >= <span class="num">3.0</span>) <span class="kw">return</span> <span class="str">"Sangat Memuaskan"</span>;
+        <span class="kw">if</span> (ipk >= <span class="num">2.5</span>) <span class="kw">return</span> <span class="str">"Memuaskan"</span>;
+        <span class="kw">return</span> <span class="str">"Cukup"</span>;
+    }
+
+    <span class="cmt">// toString: otomatis dipanggil saat print object</span>
+    <span class="ann">@Override</span>
+    <span class="kw">public</span> String <span class="fn">toString</span>() {
+        <span class="kw">return</span> <span class="str">"Mahasiswa{"</span> + nama + <span class="str">", NIM:"</span> + nim + <span class="str">", IPK:"</span> + ipk + <span class="str">"}"</span>;
+    }
+}</pre>
+    </div>
+    <div class="code-block">
+      <div class="code-label">Main.java — Penggunaan</div>
+      <pre><span class="kw">public class</span> <span class="cls">Main</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(String[] args) {
+        <span class="cmt">// Membuat object</span>
+        Mahasiswa m1 = <span class="kw">new</span> <span class="cls">Mahasiswa</span>(<span class="str">"Budi"</span>, <span class="str">"123456"</span>, <span class="num">3.75</span>);
+        Mahasiswa m2 = <span class="kw">new</span> <span class="cls">Mahasiswa</span>();  <span class="cmt">// constructor kosong</span>
+
+        System.out.<span class="fn">println</span>(m1.<span class="fn">getNama</span>());      <span class="cmt">// Budi</span>
+        System.out.<span class="fn">println</span>(m1.<span class="fn">getPredikat</span>()); <span class="cmt">// Cumlaude</span>
+        System.out.<span class="fn">println</span>(m1);              <span class="cmt">// memanggil toString()</span>
+
+        <span class="cmt">// Array of objects</span>
+        Mahasiswa[] kelas = <span class="kw">new</span> Mahasiswa[<span class="num">3</span>];
+        kelas[<span class="num">0</span>] = <span class="kw">new</span> <span class="cls">Mahasiswa</span>(<span class="str">"Ani"</span>, <span class="str">"111"</span>, <span class="num">3.9</span>);
+        kelas[<span class="num">1</span>] = <span class="kw">new</span> <span class="cls">Mahasiswa</span>(<span class="str">"Budi"</span>, <span class="str">"222"</span>, <span class="num">3.5</span>);
+        kelas[<span class="num">2</span>] = <span class="kw">new</span> <span class="cls">Mahasiswa</span>(<span class="str">"Cici"</span>, <span class="str">"333"</span>, <span class="num">2.8</span>);
+    }
+}</pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Static Member</h3>
+    <div class="code-block">
+      <div class="code-label">Static.java</div>
+      <pre><span class="kw">public class</span> <span class="cls">Penghitung</span> {
+    <span class="kw">private static int</span> totalObject = <span class="num">0</span>;  <span class="cmt">// dibagi semua object</span>
+    <span class="kw">private int</span> id;
+
+    <span class="kw">public</span> <span class="cls">Penghitung</span>() {
+        totalObject++;
+        <span class="kw">this</span>.id = totalObject;
+    }
+
+    <span class="kw">public static int</span> <span class="fn">getTotalObject</span>() {
+        <span class="kw">return</span> totalObject;
+    }
+}
+
+<span class="cmt">// Di main:</span>
+<span class="kw">new</span> <span class="cls">Penghitung</span>();
+<span class="kw">new</span> <span class="cls">Penghitung</span>();
+System.out.<span class="fn">println</span>(Penghitung.<span class="fn">getTotalObject</span>()); <span class="cmt">// 2</span></pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Method Overloading</h3>
+    <div class="code-block">
+      <div class="code-label">Overloading.java</div>
+      <pre><span class="kw">public class</span> <span class="cls">Kalkulator</span> {
+    <span class="cmt">// Method dengan nama sama, parameter berbeda</span>
+    <span class="kw">public int</span>    <span class="fn">tambah</span>(<span class="kw">int</span> a, <span class="kw">int</span> b)          { <span class="kw">return</span> a + b; }
+    <span class="kw">public double</span> <span class="fn">tambah</span>(<span class="kw">double</span> a, <span class="kw">double</span> b)    { <span class="kw">return</span> a + b; }
+    <span class="kw">public int</span>    <span class="fn">tambah</span>(<span class="kw">int</span> a, <span class="kw">int</span> b, <span class="kw">int</span> c)  { <span class="kw">return</span> a + b + c; }
+}</pre>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- BAB 11 -->
+<div class="chapter" id="bab11">
+  <div class="chapter-header">
+    <span class="chapter-num">BAB 11</span>
+    <h2>Pewarisan, Polimorfisme, dan Interface <span class="intro-badge i1">INTRO 1</span></h2>
+  </div>
+
+  <div class="section">
+    <h3>Pewarisan (Inheritance)</h3>
+    <p>Class anak (<em>subclass</em>) mewarisi semua atribut dan method dari class induk (<em>superclass</em>) menggunakan keyword <code>extends</code>.</p>
+    <div class="code-block">
+      <div class="code-label">Pewarisan.java</div>
+      <pre><span class="cmt">// Superclass (class induk)</span>
+<span class="kw">public class</span> <span class="cls">Kendaraan</span> {
+    <span class="kw">protected</span> String merek;
+    <span class="kw">protected int</span> tahun;
+
+    <span class="kw">public</span> <span class="cls">Kendaraan</span>(String merek, <span class="kw">int</span> tahun) {
+        <span class="kw">this</span>.merek = merek;
+        <span class="kw">this</span>.tahun = tahun;
+    }
+
+    <span class="kw">public void</span> <span class="fn">info</span>() {
+        System.out.<span class="fn">println</span>(merek + <span class="str">" ("</span> + tahun + <span class="str">")"</span>);
+    }
+}
+
+<span class="cmt">// Subclass (class anak)</span>
+<span class="kw">public class</span> <span class="cls">Mobil</span> <span class="kw">extends</span> <span class="cls">Kendaraan</span> {
+    <span class="kw">private int</span> jumlahPintu;
+
+    <span class="kw">public</span> <span class="cls">Mobil</span>(String merek, <span class="kw">int</span> tahun, <span class="kw">int</span> pintu) {
+        <span class="kw">super</span>(merek, tahun);  <span class="cmt">// panggil constructor superclass</span>
+        <span class="kw">this</span>.jumlahPintu = pintu;
+    }
+
+    <span class="ann">@Override</span>
+    <span class="kw">public void</span> <span class="fn">info</span>() {
+        <span class="kw">super</span>.<span class="fn">info</span>();  <span class="cmt">// panggil method superclass</span>
+        System.out.<span class="fn">println</span>(<span class="str">"Pintu: "</span> + jumlahPintu);
+    }
+}
+
+<span class="cmt">// Penggunaan:</span>
+Mobil m = <span class="kw">new</span> <span class="cls">Mobil</span>(<span class="str">"Toyota"</span>, <span class="num">2022</span>, <span class="num">4</span>);
+m.<span class="fn">info</span>();
+<span class="cmt">// Output:
+// Toyota (2022)
+// Pintu: 4</span></pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Polimorfisme</h3>
+    <p>Satu referensi bertipe superclass dapat menunjuk ke object subclass. Method yang dipanggil ditentukan saat runtime (dynamic dispatch).</p>
+    <div class="code-block">
+      <div class="code-label">Polimorfisme.java</div>
+      <pre>Kendaraan k1 = <span class="kw">new</span> <span class="cls">Mobil</span>(<span class="str">"Honda"</span>, <span class="num">2021</span>, <span class="num">2</span>);
+Kendaraan k2 = <span class="kw">new</span> <span class="cls">Motor</span>(<span class="str">"Yamaha"</span>, <span class="num">2020</span>);
+
+Kendaraan[] garage = {k1, k2};
+<span class="kw">for</span> (Kendaraan k : garage) {
+    k.<span class="fn">info</span>();  <span class="cmt">// method yang benar otomatis dipanggil!</span>
+}</pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Abstract Class</h3>
+    <div class="code-block">
+      <div class="code-label">AbstractClass.java</div>
+      <pre><span class="kw">public abstract class</span> <span class="cls">Bentuk</span> {
+    <span class="kw">protected</span> String warna;
+
+    <span class="kw">public</span> <span class="cls">Bentuk</span>(String warna) { <span class="kw">this</span>.warna = warna; }
+
+    <span class="cmt">// Abstract method: WAJIB diimplementasi subclass</span>
+    <span class="kw">public abstract double</span> <span class="fn">hitungLuas</span>();
+    <span class="kw">public abstract double</span> <span class="fn">hitungKeliling</span>();
+
+    <span class="cmt">// Method biasa (boleh diwarisi langsung)</span>
+    <span class="kw">public void</span> <span class="fn">tampilkan</span>() {
+        System.out.<span class="fn">println</span>(<span class="str">"Warna: "</span> + warna + <span class="str">", Luas: "</span> + <span class="fn">hitungLuas</span>());
+    }
+}
+
+<span class="kw">public class</span> <span class="cls">Lingkaran</span> <span class="kw">extends</span> <span class="cls">Bentuk</span> {
+    <span class="kw">private double</span> radius;
+
+    <span class="kw">public</span> <span class="cls">Lingkaran</span>(String warna, <span class="kw">double</span> radius) {
+        <span class="kw">super</span>(warna);
+        <span class="kw">this</span>.radius = radius;
+    }
+
+    <span class="ann">@Override</span>
+    <span class="kw">public double</span> <span class="fn">hitungLuas</span>() { <span class="kw">return</span> Math.PI * radius * radius; }
+
+    <span class="ann">@Override</span>
+    <span class="kw">public double</span> <span class="fn">hitungKeliling</span>() { <span class="kw">return</span> <span class="num">2</span> * Math.PI * radius; }
+}</pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Interface</h3>
+    <p>Interface adalah kontrak — mendefinisikan method yang HARUS diimplementasi. Satu class bisa mengimplementasi banyak interface.</p>
+    <div class="code-block">
+      <div class="code-label">Interface.java</div>
+      <pre><span class="kw">public interface</span> <span class="cls">Bisa Terbang</span> {
+    <span class="kw">void</span> <span class="fn">terbang</span>();  <span class="cmt">// semua method interface otomatis public abstract</span>
+    <span class="kw">default void</span> <span class="fn">info</span>() { System.out.<span class="fn">println</span>(<span class="str">"Saya bisa terbang!"</span>); }
+}
+
+<span class="kw">public interface</span> <span class="cls">BisaBerenang</span> {
+    <span class="kw">void</span> <span class="fn">berenang</span>();
+}
+
+<span class="cmt">// Class mengimplementasi 2 interface sekaligus</span>
+<span class="kw">public class</span> <span class="cls">Bebek</span> <span class="kw">implements</span> <span class="cls">BisaTerbang</span>, <span class="cls">BisaBerenang</span> {
+    <span class="ann">@Override</span>
+    <span class="kw">public void</span> <span class="fn">terbang</span>() { System.out.<span class="fn">println</span>(<span class="str">"Bebek terbang (pendek)"</span>); }
+
+    <span class="ann">@Override</span>
+    <span class="kw">public void</span> <span class="fn">berenang</span>() { System.out.<span class="fn">println</span>(<span class="str">"Bebek berenang"</span>); }
+}</pre>
+    </div>
+    <table class="tbl">
+      <tr><th></th><th>Abstract Class</th><th>Interface</th></tr>
+      <tr><td>Constructor</td><td>✅ Ada</td><td>❌ Tidak ada</td></tr>
+      <tr><td>Atribut non-final</td><td>✅ Ada</td><td>❌ Tidak (hanya konstanta)</td></tr>
+      <tr><td>Diwarisi dengan</td><td>extends</td><td>implements</td></tr>
+      <tr><td>Multiple inheritance</td><td>❌ Satu saja</td><td>✅ Bisa banyak</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- BAB 12 -->
+<div class="chapter" id="bab12">
+  <div class="chapter-header">
+    <span class="chapter-num">BAB 12</span>
+    <h2>Penanganan Exception <span class="intro-badge i1">INTRO 1</span></h2>
+  </div>
+
+  <div class="section">
+    <h3>Apa itu Exception?</h3>
+    <p>Exception adalah kejadian tidak terduga yang terjadi saat program berjalan dan mengganggu alur normal program. Contoh: membagi dengan nol, mengakses array di luar batas, konversi String ke int gagal.</p>
+    <table class="tbl">
+      <tr><th>Exception Umum</th><th>Penyebab</th></tr>
+      <tr><td>ArithmeticException</td><td>Pembagian dengan nol</td></tr>
+      <tr><td>ArrayIndexOutOfBoundsException</td><td>Akses elemen array di luar batas</td></tr>
+      <tr><td>NullPointerException</td><td>Akses object yang null</td></tr>
+      <tr><td>NumberFormatException</td><td>Konversi String ke angka gagal</td></tr>
+      <tr><td>ClassCastException</td><td>Cast ke tipe yang tidak kompatibel</td></tr>
+      <tr><td>StackOverflowError</td><td>Rekursi tak terbatas</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h3>try – catch – finally</h3>
+    <div class="code-block">
+      <div class="code-label">TryCatch.java</div>
+      <pre><span class="kw">public class</span> <span class="cls">ContohException</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(String[] args) {
+        <span class="kw">try</span> {
+            <span class="cmt">// Kode yang berpotensi error</span>
+            <span class="kw">int</span>[] arr = <span class="kw">new int</span>[<span class="num">5</span>];
+            arr[<span class="num">10</span>] = <span class="num">99</span>;  <span class="cmt">// ArrayIndexOutOfBoundsException!</span>
+
+        } <span class="kw">catch</span> (ArrayIndexOutOfBoundsException e) {
+            <span class="cmt">// Tangani jenis exception ini</span>
+            System.out.<span class="fn">println</span>(<span class="str">"Error array: "</span> + e.<span class="fn">getMessage</span>());
+
+        } <span class="kw">catch</span> (Exception e) {
+            <span class="cmt">// Tangani exception lain (lebih umum, ditaruh di bawah)</span>
+            System.out.<span class="fn">println</span>(<span class="str">"Error umum: "</span> + e.<span class="fn">getMessage</span>());
+
+        } <span class="kw">finally</span> {
+            <span class="cmt">// SELALU dieksekusi, ada error atau tidak</span>
+            System.out.<span class="fn">println</span>(<span class="str">"Selesai (finally selalu jalan)"</span>);
+        }
+    }
+}</pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>throws dan throw</h3>
+    <div class="code-block">
+      <div class="code-label">ThrowThrows.java</div>
+      <pre><span class="cmt">// throws: deklarasi bahwa method bisa melempar exception</span>
+<span class="kw">public static double</span> <span class="fn">bagi</span>(<span class="kw">int</span> a, <span class="kw">int</span> b) <span class="kw">throws</span> ArithmeticException {
+    <span class="kw">if</span> (b == <span class="num">0</span>) {
+        <span class="cmt">// throw: secara eksplisit melempar exception</span>
+        <span class="kw">throw new</span> ArithmeticException(<span class="str">"Tidak bisa bagi dengan nol!"</span>);
+    }
+    <span class="kw">return</span> (<span class="kw">double</span>) a / b;
+}
+
+<span class="cmt">// Penggunaan di main:</span>
+<span class="kw">try</span> {
+    System.out.<span class="fn">println</span>(<span class="fn">bagi</span>(<span class="num">10</span>, <span class="num">0</span>));
+} <span class="kw">catch</span> (ArithmeticException e) {
+    System.out.<span class="fn">println</span>(e.<span class="fn">getMessage</span>());  <span class="cmt">// Tidak bisa bagi dengan nol!</span>
+}</pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Custom Exception</h3>
+    <div class="code-block">
+      <div class="code-label">CustomException.java</div>
+      <pre><span class="cmt">// Membuat exception sendiri</span>
+<span class="kw">public class</span> <span class="cls">NilaiTidakValidException</span> <span class="kw">extends</span> <span class="cls">Exception</span> {
+    <span class="kw">public</span> <span class="cls">NilaiTidakValidException</span>(String pesan) {
+        <span class="kw">super</span>(pesan);
+    }
+}
+
+<span class="cmt">// Penggunaan:</span>
+<span class="kw">public static void</span> <span class="fn">setNilai</span>(<span class="kw">int</span> n) <span class="kw">throws</span> NilaiTidakValidException {
+    <span class="kw">if</span> (n < <span class="num">0</span> || n > <span class="num">100</span>) {
+        <span class="kw">throw new</span> NilaiTidakValidException(<span class="str">"Nilai harus 0-100, kamu: "</span> + n);
+    }
+}</pre>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- ====================== INTRO 2 ====================== -->
+
+<div style="background:rgba(240,136,62,0.08);border:1px solid rgba(240,136,62,0.3);border-radius:12px;padding:1.5rem;margin:2rem 0;">
+  <p style="color:var(--orange);font-family:'JetBrains Mono',monospace;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:0.5rem;">── INTRO 2 ──</p>
+  <h2 style="font-size:1.4rem;color:var(--text);">Pemrograman Java Lanjutan</h2>
+  <p style="color:var(--muted);font-size:0.85rem;margin-top:0.5rem;">Prasyarat: sudah menguasai semua materi Intro 1</p>
+</div>
+
+<!-- I2 BAB 1 -->
+<div class="chapter" id="i2bab1">
+  <div class="chapter-header">
+    <span class="chapter-num intro2">BAB 01</span>
+    <h2>Review Konsep Dasar <span class="intro-badge i2">INTRO 2</span></h2>
+  </div>
+  <div class="section">
+    <h3>Ringkasan Konsep Penting dari Intro 1</h3>
+    <ul>
+      <li><strong>OOP:</strong> Enkapsulasi, Pewarisan, Polimorfisme, Abstraksi</li>
+      <li><strong>Class & Object:</strong> class = blueprint, object = instansi. Dibuat dengan <code>new</code></li>
+      <li><strong>Access Modifier:</strong> <code>public</code> (semua bisa akses), <code>protected</code> (class + subclass), <code>private</code> (class sendiri)</li>
+      <li><strong>static:</strong> milik class, bukan object. Dipanggil: <code>NamaClass.namaStatic</code></li>
+      <li><strong>Casting:</strong> implicit (otomatis, kecil→besar), explicit (manual, besar→kecil)</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h3>Wrapper Class</h3>
+    <p>Setiap tipe primitif punya wrapper class (versi Object-nya). Diperlukan saat bekerja dengan Collection.</p>
+    <table class="tbl">
+      <tr><th>Primitif</th><th>Wrapper Class</th><th>Contoh Konversi</th></tr>
+      <tr><td>int</td><td>Integer</td><td>Integer.parseInt("10") → 10</td></tr>
+      <tr><td>double</td><td>Double</td><td>Double.parseDouble("3.14") → 3.14</td></tr>
+      <tr><td>char</td><td>Character</td><td>Character.isLetter('A') → true</td></tr>
+      <tr><td>boolean</td><td>Boolean</td><td>Boolean.parseBoolean("true")</td></tr>
+    </table>
+    <div class="callout tip"><strong>Autoboxing:</strong> Java otomatis mengkonversi antara primitif dan wrapper: <code>Integer i = 5;</code> (boxing) dan <code>int x = i;</code> (unboxing)</div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- I2 BAB 2 -->
+<div class="chapter" id="i2bab2">
+  <div class="chapter-header">
+    <span class="chapter-num intro2">BAB 02</span>
+    <h2>Exception dan Assertion <span class="intro-badge i2">INTRO 2</span></h2>
+  </div>
+  <div class="section">
+    <h3>Hierarki Exception Java</h3>
+    <div class="code-block">
+      <div class="code-label">Hirarki</div>
+      <pre>Throwable
+ ├── Error          (serius, biasanya tidak bisa ditangani)
+ │    ├── OutOfMemoryError
+ │    └── StackOverflowError
+ └── Exception      (bisa ditangani)
+      ├── RuntimeException  (Unchecked — tidak wajib ditangani)
+      │    ├── NullPointerException
+      │    ├── ArithmeticException
+      │    └── ArrayIndexOutOfBoundsException
+      └── IOException, SQLException  (Checked — WAJIB ditangani)</pre>
+    </div>
+  </div>
+  <div class="section">
+    <h3>Multi-catch dan Re-throw</h3>
+    <div class="code-block">
+      <div class="code-label">MultiCatch.java</div>
+      <pre><span class="kw">try</span> {
+    String s = <span class="kw">null</span>;
+    <span class="kw">int</span> hasil = Integer.<span class="fn">parseInt</span>(s);
+} <span class="kw">catch</span> (NullPointerException | NumberFormatException e) {
+    <span class="cmt">// Multi-catch: tangani beberapa exception sekaligus (Java 7+)</span>
+    System.out.<span class="fn">println</span>(<span class="str">"Error: "</span> + e.<span class="fn">getClass</span>().<span class="fn">getSimpleName</span>());
+}</pre>
+    </div>
+  </div>
+  <div class="section">
+    <h3>Assertion</h3>
+    <p>Assertion digunakan untuk memverifikasi asumsi logika programmer. Hanya aktif saat development, dinonaktifkan di produksi.</p>
+    <div class="code-block">
+      <div class="code-label">Assertion.java</div>
+      <pre><span class="kw">int</span> umur = -<span class="num">5</span>;
+<span class="kw">assert</span> umur >= <span class="num">0</span> : <span class="str">"Umur tidak boleh negatif!"</span>;
+<span class="cmt">// Jika false → AssertionError: Umur tidak boleh negatif!
+// Aktifkan dengan: java -ea NamaClass</span></pre>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- I2 BAB 3 -->
+<div class="chapter" id="i2bab3">
+  <div class="chapter-header">
+    <span class="chapter-num intro2">BAB 03</span>
+    <h2>Teknik Pemrograman Lanjut <span class="intro-badge i2">INTRO 2</span></h2>
+  </div>
+  <div class="section">
+    <h3>Collection Framework</h3>
+    <p>Collection adalah struktur data yang lebih fleksibel dari array — ukurannya dinamis.</p>
+    <div class="code-block">
+      <div class="code-label">Collection.java</div>
+      <pre><span class="kw">import</span> java.util.*;
+
+<span class="cmt">// ArrayList: daftar terurut, boleh duplikat</span>
+ArrayList&lt;String&gt; nama = <span class="kw">new</span> ArrayList&lt;&gt;();
+nama.<span class="fn">add</span>(<span class="str">"Budi"</span>);
+nama.<span class="fn">add</span>(<span class="str">"Ani"</span>);
+nama.<span class="fn">add</span>(<span class="str">"Budi"</span>);   <span class="cmt">// duplikat diizinkan</span>
+System.out.<span class="fn">println</span>(nama.<span class="fn">size</span>());    <span class="cmt">// 3</span>
+System.out.<span class="fn">println</span>(nama.<span class="fn">get</span>(<span class="num">1</span>));    <span class="cmt">// Ani</span>
+nama.<span class="fn">remove</span>(<span class="str">"Budi"</span>);               <span class="cmt">// hapus yang pertama</span>
+Collections.<span class="fn">sort</span>(nama);             <span class="cmt">// urutkan</span>
+
+<span class="cmt">// HashMap: pasangan key-value</span>
+HashMap&lt;String, Integer&gt; nilai = <span class="kw">new</span> HashMap&lt;&gt;();
+nilai.<span class="fn">put</span>(<span class="str">"Matematika"</span>, <span class="num">90</span>);
+nilai.<span class="fn">put</span>(<span class="str">"IPA"</span>, <span class="num">85</span>);
+System.out.<span class="fn">println</span>(nilai.<span class="fn">get</span>(<span class="str">"Matematika"</span>));  <span class="cmt">// 90</span>
+System.out.<span class="fn">println</span>(nilai.<span class="fn">containsKey</span>(<span class="str">"IPA"</span>));  <span class="cmt">// true</span>
+
+<span class="cmt">// HashSet: tidak ada duplikat, tidak terurut</span>
+HashSet&lt;Integer&gt; angka = <span class="kw">new</span> HashSet&lt;&gt;();
+angka.<span class="fn">add</span>(<span class="num">5</span>);
+angka.<span class="fn">add</span>(<span class="num">3</span>);
+angka.<span class="fn">add</span>(<span class="num">5</span>);   <span class="cmt">// duplikat diabaikan</span>
+System.out.<span class="fn">println</span>(angka.<span class="fn">size</span>());  <span class="cmt">// 2</span></pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Iterasi Collection dengan Iterator</h3>
+    <div class="code-block">
+      <div class="code-label">Iterator.java</div>
+      <pre>ArrayList&lt;String&gt; list = <span class="kw">new</span> ArrayList&lt;&gt;(Arrays.<span class="fn">asList</span>(<span class="str">"A"</span>, <span class="str">"B"</span>, <span class="str">"C"</span>));
+
+<span class="cmt">// Cara 1: for-each</span>
+<span class="kw">for</span> (String s : list) System.out.<span class="fn">println</span>(s);
+
+<span class="cmt">// Cara 2: Iterator (bisa hapus saat iterasi)</span>
+Iterator&lt;String&gt; it = list.<span class="fn">iterator</span>();
+<span class="kw">while</span> (it.<span class="fn">hasNext</span>()) {
+    String s = it.<span class="fn">next</span>();
+    <span class="kw">if</span> (s.<span class="fn">equals</span>(<span class="str">"B"</span>)) it.<span class="fn">remove</span>();  <span class="cmt">// aman saat iterasi</span>
+}</pre>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- I2 BAB 4 -->
+<div class="chapter" id="i2bab4">
+  <div class="chapter-header">
+    <span class="chapter-num intro2">BAB 04</span>
+    <h2>Tour Package java.lang <span class="intro-badge i2">INTRO 2</span></h2>
+  </div>
+  <div class="section">
+    <h3>Class-Class Penting di java.lang</h3>
+    <p>Package <code>java.lang</code> diimpor otomatis oleh Java — tidak perlu import manual.</p>
+    <div class="code-block">
+      <div class="code-label">JavaLang.java</div>
+      <pre><span class="cmt">// StringBuilder: modifikasi String yang efisien</span>
+StringBuilder sb = <span class="kw">new</span> StringBuilder();
+sb.<span class="fn">append</span>(<span class="str">"Hello"</span>);
+sb.<span class="fn">append</span>(<span class="str">" World"</span>);
+sb.<span class="fn">insert</span>(<span class="num">5</span>, <span class="str">","</span>);
+sb.<span class="fn">delete</span>(<span class="num">5</span>, <span class="num">6</span>);
+sb.<span class="fn">reverse</span>();
+System.out.<span class="fn">println</span>(sb.<span class="fn">toString</span>());
+
+<span class="cmt">// System class</span>
+System.out.<span class="fn">println</span>(<span class="str">"output"</span>);
+System.err.<span class="fn">println</span>(<span class="str">"error"</span>);
+<span class="kw">long</span> waktu = System.<span class="fn">currentTimeMillis</span>();
+System.<span class="fn">exit</span>(<span class="num">0</span>);  <span class="cmt">// keluar program, kode 0 = normal</span>
+
+<span class="cmt">// Runtime class</span>
+Runtime rt = Runtime.<span class="fn">getRuntime</span>();
+System.out.<span class="fn">println</span>(<span class="str">"Memori tersedia: "</span> + rt.<span class="fn">freeMemory</span>());
+System.out.<span class="fn">println</span>(<span class="str">"Jumlah CPU: "</span> + rt.<span class="fn">availableProcessors</span>());</pre>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- I2 BAB 5 -->
+<div class="chapter" id="i2bab5">
+  <div class="chapter-header">
+    <span class="chapter-num intro2">BAB 05</span>
+    <h2>Aplikasi Berbasis Teks <span class="intro-badge i2">INTRO 2</span></h2>
+  </div>
+  <div class="section">
+    <h3>Format Output dengan printf & format</h3>
+    <div class="code-block">
+      <div class="code-label">Format.java</div>
+      <pre><span class="kw">double</span> harga = <span class="num">15000.5</span>;
+<span class="kw">int</span> qty = <span class="num">3</span>;
+String nama = <span class="str">"Kopi"</span>;
+
+<span class="cmt">// printf: format langsung ke konsol</span>
+System.out.<span class="fn">printf</span>(<span class="str">"%-10s %5d %10.2f%n"</span>, nama, qty, harga * qty);
+<span class="cmt">// Output: Kopi           3   45001,50</span>
+
+<span class="cmt">// String.format: buat String terformat</span>
+String laporan = String.<span class="fn">format</span>(<span class="str">"Nama: %s | Qty: %d | Total: Rp%.0f"</span>,
+                                 nama, qty, harga * qty);
+System.out.<span class="fn">println</span>(laporan);</pre>
+    </div>
+    <table class="tbl">
+      <tr><th>Format Specifier</th><th>Tipe</th><th>Contoh</th></tr>
+      <tr><td>%s</td><td>String</td><td>%s → "Hello"</td></tr>
+      <tr><td>%d</td><td>Integer</td><td>%5d → "   42"</td></tr>
+      <tr><td>%f</td><td>Float/Double</td><td>%.2f → "3.14"</td></tr>
+      <tr><td>%n</td><td>Newline</td><td>setara \n</td></tr>
+      <tr><td>%-</td><td>Left-align</td><td>%-10s rata kiri</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- I2 BAB 6 -->
+<div class="chapter" id="i2bab6">
+  <div class="chapter-header">
+    <span class="chapter-num intro2">BAB 06</span>
+    <h2>Algoritma Sorting <span class="intro-badge i2">INTRO 2</span></h2>
+  </div>
+  <div class="section">
+    <h3>Bubble Sort</h3>
+    <p>Algoritma paling sederhana: bandingkan dua elemen bersebelahan, tukar jika perlu. O(n²).</p>
+    <div class="code-block">
+      <div class="code-label">BubbleSort.java</div>
+      <pre><span class="kw">public static void</span> <span class="fn">bubbleSort</span>(<span class="kw">int</span>[] arr) {
+    <span class="kw">int</span> n = arr.length;
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i < n - <span class="num">1</span>; i++) {
+        <span class="kw">for</span> (<span class="kw">int</span> j = <span class="num">0</span>; j < n - i - <span class="num">1</span>; j++) {
+            <span class="kw">if</span> (arr[j] > arr[j + <span class="num">1</span>]) {
+                <span class="cmt">// tukar</span>
+                <span class="kw">int</span> temp = arr[j];
+                arr[j] = arr[j + <span class="num">1</span>];
+                arr[j + <span class="num">1</span>] = temp;
+            }
+        }
+    }
+}</pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Selection Sort</h3>
+    <div class="code-block">
+      <div class="code-label">SelectionSort.java</div>
+      <pre><span class="kw">public static void</span> <span class="fn">selectionSort</span>(<span class="kw">int</span>[] arr) {
+    <span class="kw">int</span> n = arr.length;
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i < n - <span class="num">1</span>; i++) {
+        <span class="kw">int</span> minIdx = i;
+        <span class="kw">for</span> (<span class="kw">int</span> j = i + <span class="num">1</span>; j < n; j++) {
+            <span class="kw">if</span> (arr[j] < arr[minIdx]) minIdx = j;
+        }
+        <span class="kw">int</span> temp = arr[minIdx];
+        arr[minIdx] = arr[i];
+        arr[i] = temp;
+    }
+}</pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Sorting Bawaan Java</h3>
+    <div class="code-block">
+      <div class="code-label">JavaSort.java</div>
+      <pre><span class="kw">import</span> java.util.Arrays;
+<span class="kw">import</span> java.util.Collections;
+
+<span class="kw">int</span>[] angka = {<span class="num">5</span>, <span class="num">2</span>, <span class="num">8</span>, <span class="num">1</span>, <span class="num">9</span>};
+Arrays.<span class="fn">sort</span>(angka);  <span class="cmt">// [1, 2, 5, 8, 9]</span>
+
+ArrayList&lt;Integer&gt; list = <span class="kw">new</span> ArrayList&lt;&gt;(Arrays.<span class="fn">asList</span>(<span class="num">5</span>, <span class="num">2</span>, <span class="num">8</span>));
+Collections.<span class="fn">sort</span>(list);               <span class="cmt">// ascending</span>
+Collections.<span class="fn">sort</span>(list, Collections.<span class="fn">reverseOrder</span>()); <span class="cmt">// descending</span></pre>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- I2 BAB 7 -->
+<div class="chapter" id="i2bab7">
+  <div class="chapter-header">
+    <span class="chapter-num intro2">BAB 07</span>
+    <h2>AWT dan Swing (GUI) <span class="intro-badge i2">INTRO 2</span></h2>
+  </div>
+  <div class="section">
+    <h3>Membuat Window dengan Swing</h3>
+    <div class="code-block">
+      <div class="code-label">GUIContoh.java</div>
+      <pre><span class="kw">import</span> javax.swing.*;
+<span class="kw">import</span> java.awt.*;
+
+<span class="kw">public class</span> <span class="cls">FormLogin</span> <span class="kw">extends</span> <span class="cls">JFrame</span> {
+
+    <span class="kw">public</span> <span class="cls">FormLogin</span>() {
+        <span class="kw">super</span>(<span class="str">"Form Login"</span>);
+        <span class="fn">setSize</span>(<span class="num">300</span>, <span class="num">200</span>);
+        <span class="fn">setDefaultCloseOperation</span>(JFrame.EXIT_ON_CLOSE);
+        <span class="fn">setLocationRelativeTo</span>(<span class="kw">null</span>);  <span class="cmt">// posisi tengah layar</span>
+
+        <span class="cmt">// Layout manager</span>
+        <span class="fn">setLayout</span>(<span class="kw">new</span> <span class="cls">FlowLayout</span>());
+
+        <span class="cmt">// Komponen</span>
+        JLabel lblNama = <span class="kw">new</span> <span class="cls">JLabel</span>(<span class="str">"Username:"</span>);
+        JTextField txtNama = <span class="kw">new</span> <span class="cls">JTextField</span>(<span class="num">15</span>);
+        JLabel lblPass = <span class="kw">new</span> <span class="cls">JLabel</span>(<span class="str">"Password:"</span>);
+        JPasswordField txtPass = <span class="kw">new</span> <span class="cls">JPasswordField</span>(<span class="num">15</span>);
+        JButton btnLogin = <span class="kw">new</span> <span class="cls">JButton</span>(<span class="str">"Login"</span>);
+
+        <span class="cmt">// Tambah ke frame</span>
+        <span class="fn">add</span>(lblNama); <span class="fn">add</span>(txtNama);
+        <span class="fn">add</span>(lblPass); <span class="fn">add</span>(txtPass);
+        <span class="fn">add</span>(btnLogin);
+
+        <span class="fn">setVisible</span>(<span class="kw">true</span>);
+    }
+
+    <span class="kw">public static void</span> <span class="fn">main</span>(String[] args) {
+        <span class="kw">new</span> <span class="cls">FormLogin</span>();
+    }
+}</pre>
+    </div>
+    <table class="tbl">
+      <tr><th>Komponen Swing</th><th>Fungsi</th></tr>
+      <tr><td>JFrame</td><td>Window utama</td></tr>
+      <tr><td>JPanel</td><td>Wadah/container</td></tr>
+      <tr><td>JLabel</td><td>Teks statis</td></tr>
+      <tr><td>JTextField</td><td>Input teks satu baris</td></tr>
+      <tr><td>JPasswordField</td><td>Input password (tersembunyi)</td></tr>
+      <tr><td>JTextArea</td><td>Input teks multi-baris</td></tr>
+      <tr><td>JButton</td><td>Tombol</td></tr>
+      <tr><td>JCheckBox</td><td>Checkbox</td></tr>
+      <tr><td>JRadioButton</td><td>Radio button</td></tr>
+      <tr><td>JComboBox</td><td>Dropdown pilihan</td></tr>
+      <tr><td>JTable</td><td>Tabel data</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- I2 BAB 8 -->
+<div class="chapter" id="i2bab8">
+  <div class="chapter-header">
+    <span class="chapter-num intro2">BAB 08</span>
+    <h2>GUI Event Handling <span class="intro-badge i2">INTRO 2</span></h2>
+  </div>
+  <div class="section">
+    <h3>ActionListener untuk Tombol</h3>
+    <div class="code-block">
+      <div class="code-label">EventHandling.java</div>
+      <pre><span class="kw">import</span> javax.swing.*;
+<span class="kw">import</span> java.awt.event.*;
+
+<span class="kw">public class</span> <span class="cls">KalkulatorGUI</span> <span class="kw">extends</span> <span class="cls">JFrame</span> {
+    <span class="kw">private</span> JTextField txt1, txt2, txtHasil;
+    <span class="kw">private</span> JButton btnTambah;
+
+    <span class="kw">public</span> <span class="cls">KalkulatorGUI</span>() {
+        txt1 = <span class="kw">new</span> <span class="cls">JTextField</span>(<span class="num">8</span>);
+        txt2 = <span class="kw">new</span> <span class="cls">JTextField</span>(<span class="num">8</span>);
+        txtHasil = <span class="kw">new</span> <span class="cls">JTextField</span>(<span class="num">8</span>);
+        txtHasil.<span class="fn">setEditable</span>(<span class="kw">false</span>);
+        btnTambah = <span class="kw">new</span> <span class="cls">JButton</span>(<span class="str">"Tambah"</span>);
+
+        <span class="cmt">// Pasang event listener (inner class anonim)</span>
+        btnTambah.<span class="fn">addActionListener</span>(<span class="kw">new</span> ActionListener() {
+            <span class="ann">@Override</span>
+            <span class="kw">public void</span> <span class="fn">actionPerformed</span>(ActionEvent e) {
+                <span class="kw">try</span> {
+                    <span class="kw">double</span> a = Double.<span class="fn">parseDouble</span>(txt1.<span class="fn">getText</span>());
+                    <span class="kw">double</span> b = Double.<span class="fn">parseDouble</span>(txt2.<span class="fn">getText</span>());
+                    txtHasil.<span class="fn">setText</span>(String.<span class="fn">valueOf</span>(a + b));
+                } <span class="kw">catch</span> (NumberFormatException ex) {
+                    JOptionPane.<span class="fn">showMessageDialog</span>(<span class="kw">null</span>, <span class="str">"Masukkan angka!"</span>);
+                }
+            }
+        });
+
+        <span class="fn">setLayout</span>(<span class="kw">new</span> <span class="cls">FlowLayout</span>());
+        <span class="fn">add</span>(txt1); <span class="fn">add</span>(<span class="kw">new</span> <span class="cls">JLabel</span>(<span class="str">"+"</span>));
+        <span class="fn">add</span>(txt2); <span class="fn">add</span>(btnTambah); <span class="fn">add</span>(txtHasil);
+        <span class="fn">setSize</span>(<span class="num">400</span>, <span class="num">80</span>);
+        <span class="fn">setVisible</span>(<span class="kw">true</span>);
+    }
+}</pre>
+    </div>
+    <div class="callout tip"><strong>Lambda (Java 8+):</strong> Bisa lebih ringkas: <code>btnTambah.addActionListener(e -&gt; { /* aksi */ });</code></div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- I2 BAB 9 -->
+<div class="chapter" id="i2bab9">
+  <div class="chapter-header">
+    <span class="chapter-num intro2">BAB 09</span>
+    <h2>Threads (Multithreading) <span class="intro-badge i2">INTRO 2</span></h2>
+  </div>
+  <div class="section">
+    <h3>Membuat Thread</h3>
+    <div class="code-block">
+      <div class="code-label">Thread.java</div>
+      <pre><span class="cmt">// Cara 1: extends Thread</span>
+<span class="kw">public class</span> <span class="cls">ThreadKu</span> <span class="kw">extends</span> <span class="cls">Thread</span> {
+    <span class="ann">@Override</span>
+    <span class="kw">public void</span> <span class="fn">run</span>() {
+        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">1</span>; i <= <span class="num">5</span>; i++) {
+            System.out.<span class="fn">println</span>(<span class="fn">getName</span>() + <span class="str">": iterasi "</span> + i);
+            <span class="kw">try</span> { Thread.<span class="fn">sleep</span>(<span class="num">100</span>); } <span class="cmt">// jeda 100ms</span>
+            <span class="kw">catch</span> (InterruptedException e) { e.<span class="fn">printStackTrace</span>(); }
+        }
+    }
+}
+
+<span class="cmt">// Cara 2: implements Runnable (lebih disarankan)</span>
+<span class="kw">public class</span> <span class="cls">TugasSaya</span> <span class="kw">implements</span> <span class="cls">Runnable</span> {
+    <span class="ann">@Override</span>
+    <span class="kw">public void</span> <span class="fn">run</span>() {
+        System.out.<span class="fn">println</span>(<span class="str">"Runnable berjalan: "</span> + Thread.<span class="fn">currentThread</span>().<span class="fn">getName</span>());
+    }
+}
+
+<span class="cmt">// Di main:</span>
+ThreadKu t1 = <span class="kw">new</span> <span class="cls">ThreadKu</span>();
+ThreadKu t2 = <span class="kw">new</span> <span class="cls">ThreadKu</span>();
+t1.<span class="fn">start</span>();  <span class="cmt">// bukan run()! start() yang membuat thread baru</span>
+t2.<span class="fn">start</span>();
+<span class="cmt">// t1 dan t2 berjalan BERSAMAAN (concurrent)</span>
+
+Thread r = <span class="kw">new</span> Thread(<span class="kw">new</span> <span class="cls">TugasSaya</span>());
+r.<span class="fn">start</span>();</pre>
+    </div>
+  </div>
+  <div class="section">
+    <h3>Sinkronisasi Thread</h3>
+    <div class="code-block">
+      <div class="code-label">Sinkronisasi.java</div>
+      <pre><span class="kw">public class</span> <span class="cls">RekeningBank</span> {
+    <span class="kw">private int</span> saldo = <span class="num">1000</span>;
+
+    <span class="cmt">// synchronized: hanya 1 thread yang bisa masuk sekaligus</span>
+    <span class="kw">public synchronized void</span> <span class="fn">tarik</span>(<span class="kw">int</span> jumlah) {
+        <span class="kw">if</span> (saldo >= jumlah) {
+            System.out.<span class="fn">println</span>(<span class="str">"Menarik: "</span> + jumlah);
+            saldo -= jumlah;
+            System.out.<span class="fn">println</span>(<span class="str">"Sisa saldo: "</span> + saldo);
+        } <span class="kw">else</span> {
+            System.out.<span class="fn">println</span>(<span class="str">"Saldo tidak cukup!"</span>);
+        }
+    }
+}</pre>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- I2 BAB 10 -->
+<div class="chapter" id="i2bab10">
+  <div class="chapter-header">
+    <span class="chapter-num intro2">BAB 10</span>
+    <h2>Jaringan (Networking) <span class="intro-badge i2">INTRO 2</span></h2>
+  </div>
+  <div class="section">
+    <h3>Socket Client-Server</h3>
+    <div class="code-block">
+      <div class="code-label">Server.java</div>
+      <pre><span class="kw">import</span> java.net.*;
+<span class="kw">import</span> java.io.*;
+
+<span class="kw">public class</span> <span class="cls">Server</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(String[] args) <span class="kw">throws</span> IOException {
+        ServerSocket server = <span class="kw">new</span> ServerSocket(<span class="num">8080</span>);
+        System.out.<span class="fn">println</span>(<span class="str">"Server mendengarkan di port 8080..."</span>);
+
+        Socket client = server.<span class="fn">accept</span>();  <span class="cmt">// tunggu koneksi</span>
+        System.out.<span class="fn">println</span>(<span class="str">"Client terhubung!"</span>);
+
+        PrintWriter out = <span class="kw">new</span> PrintWriter(client.<span class="fn">getOutputStream</span>(), <span class="kw">true</span>);
+        out.<span class="fn">println</span>(<span class="str">"Halo dari server!"</span>);
+
+        client.<span class="fn">close</span>();
+        server.<span class="fn">close</span>();
+    }
+}</pre>
+    </div>
+    <div class="code-block">
+      <div class="code-label">Client.java</div>
+      <pre><span class="kw">public class</span> <span class="cls">Client</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(String[] args) <span class="kw">throws</span> IOException {
+        Socket socket = <span class="kw">new</span> Socket(<span class="str">"localhost"</span>, <span class="num">8080</span>);
+        BufferedReader in = <span class="kw">new</span> BufferedReader(
+            <span class="kw">new</span> InputStreamReader(socket.<span class="fn">getInputStream</span>())
+        );
+        System.out.<span class="fn">println</span>(<span class="str">"Pesan dari server: "</span> + in.<span class="fn">readLine</span>());
+        socket.<span class="fn">close</span>();
+    }
+}</pre>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- I2 BAB 11 -->
+<div class="chapter" id="i2bab11">
+  <div class="chapter-header">
+    <span class="chapter-num intro2">BAB 11</span>
+    <h2>Applet <span class="intro-badge i2">INTRO 2</span></h2>
+  </div>
+  <div class="section">
+    <h3>Java Applet (Konteks Historis)</h3>
+    <div class="callout warn"><strong>Catatan:</strong> Applet sudah deprecated di Java 9 dan dihapus di Java 11. Di era modern, digantikan JavaFX atau web framework. Materi ini penting untuk memahami konteks historis Java di browser.</div>
+    <div class="code-block">
+      <div class="code-label">AppletContoh.java (historis)</div>
+      <pre><span class="kw">import</span> java.applet.Applet;
+<span class="kw">import</span> java.awt.*;
+
+<span class="kw">public class</span> <span class="cls">AppletContoh</span> <span class="kw">extends</span> <span class="cls">Applet</span> {
+    <span class="ann">@Override</span>
+    <span class="kw">public void</span> <span class="fn">paint</span>(Graphics g) {
+        g.<span class="fn">setFont</span>(<span class="kw">new</span> Font(<span class="str">"Arial"</span>, Font.BOLD, <span class="num">24</span>));
+        g.<span class="fn">setColor</span>(Color.BLUE);
+        g.<span class="fn">drawString</span>(<span class="str">"Hello Applet!"</span>, <span class="num">50</span>, <span class="num">50</span>);
+        g.<span class="fn">drawRect</span>(<span class="num">10</span>, <span class="num">10</span>, <span class="num">200</span>, <span class="num">100</span>);
+        g.<span class="fn">fillOval</span>(<span class="num">50</span>, <span class="num">30</span>, <span class="num">80</span>, <span class="num">60</span>);
+    }
+}
+<span class="cmt">/* Siklus hidup Applet:
+   init() → start() → paint() → stop() → destroy() */</span></pre>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- I2 BAB 12 -->
+<div class="chapter" id="i2bab12">
+  <div class="chapter-header">
+    <span class="chapter-num intro2">BAB 12</span>
+    <h2>Stream I/O Lanjut <span class="intro-badge i2">INTRO 2</span></h2>
+  </div>
+  <div class="section">
+    <h3>Membaca dan Menulis File</h3>
+    <div class="code-block">
+      <div class="code-label">FileIO.java</div>
+      <pre><span class="kw">import</span> java.io.*;
+
+<span class="cmt">// Menulis ke file teks</span>
+<span class="kw">try</span> (PrintWriter pw = <span class="kw">new</span> PrintWriter(<span class="kw">new</span> FileWriter(<span class="str">"data.txt"</span>))) {
+    pw.<span class="fn">println</span>(<span class="str">"Baris pertama"</span>);
+    pw.<span class="fn">println</span>(<span class="str">"Baris kedua"</span>);
+    pw.<span class="fn">printf</span>(<span class="str">"Angka: %d%n"</span>, <span class="num">42</span>);
+} <span class="cmt">// try-with-resources: auto-close</span>
+
+<span class="cmt">// Membaca dari file teks</span>
+<span class="kw">try</span> (BufferedReader br = <span class="kw">new</span> BufferedReader(<span class="kw">new</span> FileReader(<span class="str">"data.txt"</span>))) {
+    String baris;
+    <span class="kw">while</span> ((baris = br.<span class="fn">readLine</span>()) != <span class="kw">null</span>) {
+        System.out.<span class="fn">println</span>(baris);
+    }
+} <span class="kw">catch</span> (IOException e) {
+    System.err.<span class="fn">println</span>(<span class="str">"Error: "</span> + e.<span class="fn">getMessage</span>());
+}</pre>
+    </div>
+  </div>
+  <div class="section">
+    <h3>Serialisasi Object</h3>
+    <div class="code-block">
+      <div class="code-label">Serialisasi.java</div>
+      <pre><span class="kw">import</span> java.io.*;
+
+<span class="cmt">// Class harus implements Serializable</span>
+<span class="kw">public class</span> <span class="cls">DataMahasiswa</span> <span class="kw">implements</span> Serializable {
+    <span class="kw">private static final long</span> serialVersionUID = 1L;
+    String nama;
+    <span class="kw">double</span> ipk;
+    <span class="kw">public</span> DataMahasiswa(String nama, <span class="kw">double</span> ipk) {
+        <span class="kw">this</span>.nama = nama; <span class="kw">this</span>.ipk = ipk;
+    }
+}
+
+<span class="cmt">// Menyimpan object ke file</span>
+DataMahasiswa m = <span class="kw">new</span> DataMahasiswa(<span class="str">"Budi"</span>, <span class="num">3.8</span>);
+<span class="kw">try</span> (ObjectOutputStream oos = <span class="kw">new</span> ObjectOutputStream(<span class="kw">new</span> FileOutputStream(<span class="str">"mhs.ser"</span>))) {
+    oos.<span class="fn">writeObject</span>(m);
+}
+
+<span class="cmt">// Membaca object dari file</span>
+<span class="kw">try</span> (ObjectInputStream ois = <span class="kw">new</span> ObjectInputStream(<span class="kw">new</span> FileInputStream(<span class="str">"mhs.ser"</span>))) {
+    DataMahasiswa hasil = (DataMahasiswa) ois.<span class="fn">readObject</span>();
+    System.out.<span class="fn">println</span>(hasil.nama + <span class="str">": "</span> + hasil.ipk);
+}</pre>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- I2 BAB 13 -->
+<div class="chapter" id="i2bab13">
+  <div class="chapter-header">
+    <span class="chapter-num intro2">BAB 13</span>
+    <h2>Pengenalan Generics <span class="intro-badge i2">INTRO 2</span></h2>
+  </div>
+  <div class="section">
+    <h3>Mengapa Generics?</h3>
+    <p>Generics memungkinkan kita menulis kode yang aman untuk tipe data (type-safe) dan dapat digunakan kembali untuk berbagai tipe. Ini menghindari ClassCastException saat runtime.</p>
+    <div class="code-block">
+      <div class="code-label">Generics.java</div>
+      <pre><span class="cmt">// Tanpa Generics (lama, tidak aman)</span>
+ArrayList list = <span class="kw">new</span> ArrayList();
+list.<span class="fn">add</span>(<span class="str">"Halo"</span>);
+list.<span class="fn">add</span>(<span class="num">123</span>);
+String s = (String) list.<span class="fn">get</span>(<span class="num">1</span>);  <span class="cmt">// ClassCastException saat runtime!</span>
+
+<span class="cmt">// Dengan Generics (aman, error saat compile)</span>
+ArrayList&lt;String&gt; list2 = <span class="kw">new</span> ArrayList&lt;&gt;();
+list2.<span class="fn">add</span>(<span class="str">"Halo"</span>);
+<span class="cmt">// list2.add(123);  // ERROR COMPILE → lebih aman!</span>
+String s2 = list2.<span class="fn">get</span>(<span class="num">0</span>);  <span class="cmt">// tidak perlu cast</span></pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Membuat Generic Class</h3>
+    <div class="code-block">
+      <div class="code-label">GenericClass.java</div>
+      <pre><span class="cmt">// T = Type parameter (placeholder)</span>
+<span class="kw">public class</span> <span class="cls">Kotak</span>&lt;T&gt; {
+    <span class="kw">private</span> T isi;
+
+    <span class="kw">public void</span> <span class="fn">setIsi</span>(T isi) { <span class="kw">this</span>.isi = isi; }
+    <span class="kw">public</span> T    <span class="fn">getIsi</span>()      { <span class="kw">return</span> isi; }
+
+    <span class="kw">public void</span> <span class="fn">tampilkan</span>() {
+        System.out.<span class="fn">println</span>(<span class="str">"Isi kotak: "</span> + isi + <span class="str">" ("</span> + isi.<span class="fn">getClass</span>().<span class="fn">getSimpleName</span>() + <span class="str">")"</span>);
+    }
+}
+
+<span class="cmt">// Penggunaan dengan tipe berbeda</span>
+Kotak&lt;String&gt;  kotakTeks   = <span class="kw">new</span> Kotak&lt;&gt;();
+Kotak&lt;Integer&gt; kotakAngka  = <span class="kw">new</span> Kotak&lt;&gt;();
+Kotak&lt;Double&gt;  kotakDesimal = <span class="kw">new</span> Kotak&lt;&gt;();
+
+kotakTeks.<span class="fn">setIsi</span>(<span class="str">"Java Generics"</span>);
+kotakAngka.<span class="fn">setIsi</span>(<span class="num">2024</span>);
+kotakDesimal.<span class="fn">setIsi</span>(<span class="num">3.14</span>);
+
+kotakTeks.<span class="fn">tampilkan</span>();    <span class="cmt">// Isi kotak: Java Generics (String)</span>
+kotakAngka.<span class="fn">tampilkan</span>();   <span class="cmt">// Isi kotak: 2024 (Integer)</span>
+kotakDesimal.<span class="fn">tampilkan</span>(); <span class="cmt">// Isi kotak: 3.14 (Double)</span></pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Generic Method & Wildcard</h3>
+    <div class="code-block">
+      <div class="code-label">GenericMethod.java</div>
+      <pre><span class="cmt">// Generic method</span>
+<span class="kw">public static</span> &lt;T <span class="kw">extends</span> Comparable&lt;T&gt;&gt; T <span class="fn">cariMax</span>(T a, T b) {
+    <span class="kw">return</span> a.<span class="fn">compareTo</span>(b) > <span class="num">0</span> ? a : b;
+}
+
+<span class="cmt">// Bisa dipakai untuk int, String, dll</span>
+System.out.<span class="fn">println</span>(<span class="fn">cariMax</span>(<span class="num">10</span>, <span class="num">25</span>));     <span class="cmt">// 25</span>
+System.out.<span class="fn">println</span>(<span class="fn">cariMax</span>(<span class="str">"Ani"</span>, <span class="str">"Budi"</span>)); <span class="cmt">// Budi</span>
+
+<span class="cmt">// Wildcard (?) — tipe tidak diketahui</span>
+<span class="kw">public static double</span> <span class="fn">totalList</span>(List&lt;? <span class="kw">extends</span> Number&gt; list) {
+    <span class="kw">double</span> sum = <span class="num">0</span>;
+    <span class="kw">for</span> (Number n : list) sum += n.<span class="fn">doubleValue</span>();
+    <span class="kw">return</span> sum;
+}
+<span class="cmt">// Bisa menerima List&lt;Integer&gt;, List&lt;Double&gt;, dll</span></pre>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- FOOTER -->
+<div style="padding:2rem 0;text-align:center;color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:0.75rem;">
+  <p>JENI — Java Education Network Indonesia</p>
+  <p style="margin-top:0.3rem;opacity:0.5;">Materi Intro 1 (Bab 1–12) + Intro 2 (Bab 1–13) — Semua isi lengkap</p>
+</div>
+
+</main>
+
+<script>
+// Highlight active sidebar link on scroll
+const chapters = document.querySelectorAll('.chapter');
+const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  chapters.forEach(ch => {
+    const top = ch.getBoundingClientRect().top;
+    if (top <= 100) current = ch.id;
+  });
+  sidebarLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});
+</script>
+</body>
+</html>
